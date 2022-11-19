@@ -1,0 +1,26 @@
+<svg width="70" height="8" viewBox="0 0 70 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<rect fill="#FE9E34" stroke="none" x="0" y="0" width="7" height="8" opacity="0">
+		<animate attributeName="opacity" dur="4s" values="1; 0" keyTimes="0; 1" repeatCount="indefinite" begin="0.0" />
+	</rect>
+	<rect fill="#FE9E34" stroke="none" x="9" y="0" width="7" height="8" opacity="0">
+		<animate attributeName="opacity" dur="4s" values="1; 0" keyTimes="0; 1" repeatCount="indefinite" begin="0.5" />
+	</rect>
+	<rect fill="#FE9E34" stroke="none" x="18" y="0" width="7" height="8" opacity="0">
+		<animate attributeName="opacity" dur="4s" values="1; 0" keyTimes="0; 1" repeatCount="indefinite" begin="1.0" />
+	</rect>
+	<rect fill="#FE9E34" stroke="none" x="27" y="0" width="7" height="8" opacity="0">
+		<animate attributeName="opacity" dur="4s" values="1; 0" keyTimes="0; 1" repeatCount="indefinite" begin="1.5" />
+	</rect>
+	<rect fill="#FE9E34" stroke="none" x="36" y="0" width="7" height="8" opacity="0">
+		<animate attributeName="opacity" dur="4s" values="1; 0" keyTimes="0; 1" repeatCount="indefinite" begin="2.0" />
+	</rect>
+	<rect fill="#FE9E34" stroke="none" x="45" y="0" width="7" height="8" opacity="0">
+		<animate attributeName="opacity" dur="4s" values="1; 0" keyTimes="0; 1" repeatCount="indefinite" begin="2.5" />
+	</rect>
+	<rect fill="#FE9E34" stroke="none" x="54" y="0" width="7" height="8" opacity="0">
+		<animate attributeName="opacity" dur="4s" values="1; 0" keyTimes="0; 1" repeatCount="indefinite" begin="3.0" />
+	</rect>
+	<rect fill="#FE9E34" stroke="none" x="63" y="0" width="7" height="8" opacity="0">
+		<animate attributeName="opacity" dur="4s" values="1; 0" keyTimes="0; 1" repeatCount="indefinite" begin="3.5" />
+	</rect>
+</svg>

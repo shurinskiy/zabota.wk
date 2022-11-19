@@ -39,7 +39,9 @@ $breakpoints: (
 	// "../../node_modules/animate-scss/_zooming-entrances/zooming-entrances.scss";
 
 
-// @include font-face("Roboto-Black", "RBBL");
+@include font-face("MK", "MK");
+@include font-face("Play", "PL");
+@include font-face("PlayBold", "PLB");
 // @import "../../node_modules/swiper/swiper";
 
 // Import BEM blocks scss
@@ -49,13 +51,18 @@ body, html {
 	box-sizing: border-box;
 	font-size: #{$basesize}px;
 	line-height: 1.2;
-	font-family: sans-serif;
-	background-color: #fafafa;
+	font-family: "PL", sans-serif;
+	background-color: #181818;
 	min-height: 100vh;
 	display: flex;
 	flex-flow: column nowrap;
+	position: relative;
 }
-// .main { flex: 1 0 auto; }
+
+body {
+	background: url('#{$images-path}body-noise.png') center / auto repeat #222;
+}
+
 .footer { 
 	flex: 0 0 auto; 
 	margin-top: auto; 
@@ -65,3 +72,4 @@ body, html {
 p { margin-bottom: 10px; }
 strong { font-weight: bold; }
 em { font-style: italic; }
+a { color: #fff; text-decoration: none; }

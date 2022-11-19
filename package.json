@@ -51,6 +51,7 @@
 		"webpack-stream": "^6.1.2"
 	},
 	"dependencies": {
+		"gsap": "^3.11.3",
 		"jquery": "^3.6.0"
 	},
 	"externalJs": {
@@ -63,9 +64,9 @@
 		"workdir": ""
 	},
 	"bemtree": {
-		"from": "src/**/!(_|temp)*.html",
+		"from": "src/**/*.html",
 		"to": "src/blocks",
 		"js": "src/js/blocks.js",
-		"omit": "@@,js-,active,col,row"
+		"omit": "@@,js-,active,footer"
 	}
 }

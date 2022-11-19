@@ -1,0 +1,81 @@
+.header {
+	$self: &;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+	transition: background-color 0.4s;
+
+	&::after {
+		box-sizing: border-box;
+		display: block;
+		content: '';
+		border-top: 1px solid rgba(255, 255, 255, 0.16);
+		position: relative;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		max-width: calc(100% - 48px);
+	}
+	
+	&_filled {
+		background-color: rgba(92, 92, 92, 0.5);
+		backdrop-filter: blur(30px);
+
+		&::after {
+			display: none;
+		}
+	}
+
+	&__container {
+		padding-top: 20px;
+		padding-bottom: 20px;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__logo {
+
+	}
+
+	&__side {
+		display: flex;
+		align-items: center;
+	}
+
+	&__socials {
+		display: flex;
+		gap: 4px;
+	}
+
+	&__socials-item {
+
+		&:last-child {
+			display: none;
+
+			@include media('<=sm') {
+				display: flex;
+			}
+		}
+	}
+
+	&__phone {
+		font-family: 'PL', sans-serif;
+		font-size: calc(12px + 4 * (100vw / 1920));
+		line-height: 130%;
+		margin-right: 30px;
+		margin-left: 16px;
+		transition: all, .3s;
+
+		@include media('<=sm') {
+			display: none;
+		}
+	}
+
+	&__button {
+		@include media('<=sm') {
+			display: none;
+		}
+	}
+}
