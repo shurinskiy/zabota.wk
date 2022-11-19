@@ -4,7 +4,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 (() => {
 
-	const breakpoint = window.matchMedia('(min-width:767px)');
+	const breakpoint = window.matchMedia('(min-width:780px)');
 	const items = document.querySelectorAll('.hero__item');
 	let tween;
 
