@@ -52,15 +52,11 @@ body, html {
 	font-size: #{$basesize}px;
 	line-height: 1.2;
 	font-family: "PL", sans-serif;
-	background-color: #181818;
+	background-color: #131313;
 	min-height: 100vh;
 	display: flex;
 	flex-flow: column nowrap;
 	position: relative;
-}
-
-body {
-	background: url('#{$images-path}body-noise.png') center / auto repeat #222;
 }
 
 .footer { 

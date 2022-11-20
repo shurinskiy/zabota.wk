@@ -1,4 +1,5 @@
 /* ======== Вспомогательные функции ======== */
+// import { someFunction } from "../../js/libs/helpers";
 
 
 // Проверка на объект (не массив)
@@ -185,7 +186,7 @@ export const slideToggle = (el, duration, cb) => {
 * Плавная прокрутка к заданному элементу 
 * @вызов:
 * 
-import { scrollToId } from "../../js/lib";
+import { scrollToId } from "../../js/libs/helpers";
 scrollToId(document.querySelectorAll('a[href^="#"]'));
 * 
 */
@@ -206,7 +207,7 @@ export const scrollToId = (items) => {
 * Плавная прокрутка к верху страницы
 * @вызов:
 * 
-import { scrollToTop } from "../../js/lib";
+import { scrollToTop } from "../../js/libs/helpers";
 scrollToTop(document.querySelector('a[href^="top"]'));
 * 
 */

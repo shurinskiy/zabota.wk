@@ -138,7 +138,7 @@ function icons() {
 		name: 'icons-sprite',
 		monochrome: {
 			orange: '#fe9e34',
-			dark: '#828282',
+			dark: '#555555',
 			white: '#ffffff'
 		}
 	}))
