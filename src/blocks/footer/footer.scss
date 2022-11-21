@@ -178,6 +178,11 @@
 	
 	&__mail {
 		margin-right: 30px;
+
+		&.button {
+			padding: 17px;
+			border-radius: 16px;
+		}
 		
 		@include media('<=md') {
 			margin: 0 0 20px;
@@ -186,6 +191,10 @@
 
 	&__call {
 
+		&.button {
+			padding: 17px;
+			border-radius: 16px;
+		}
 	}
 
 	&__bottom {

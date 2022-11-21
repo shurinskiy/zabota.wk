@@ -130,9 +130,12 @@
 		backdrop-filter: blur(30px);
 		border-radius: 8px;
 		color: #fff;
-		font-size: calc(16px + 6 * (100vw / 1920));
-
+		font-size: 20px;
+		display: flex;
+		flex-flow: column nowrap;
+		
 		@include media('<=sm') {
+			font-size: 18px;
 			min-width: 300px;
 		}
 
@@ -145,6 +148,10 @@
 			line-height: 130%;
 			color: #FE9E34;
 			font-size: calc(18px + 8 * (100vw / 1920));
+		
+			@include media('<=sm') {
+				margin-bottom: auto;
+			}
 		}
 
 		&:nth-child(2) {

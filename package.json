@@ -51,8 +51,10 @@
 		"webpack-stream": "^6.1.2"
 	},
 	"dependencies": {
+		"animate-scss": "^3.2.1",
 		"gsap": "^3.11.3",
-		"jquery": "^3.6.0"
+		"jquery": "^3.6.0",
+		"scroll-lock": "^2.1.5"
 	},
 	"externalJs": {
 		"jquery": "dist/jquery.min.js"

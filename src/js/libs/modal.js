@@ -116,7 +116,7 @@ export const makeModalFrame = function(options = {}, cb) {
 		} else {
 			document.addEventListener('click', (e) => {
 				let el = e.target.closest(select);
-	
+				
 				if (el && el.dataset[`${cls}`]) {
 					e.preventDefault();
 					open(el);

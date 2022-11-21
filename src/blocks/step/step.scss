@@ -1,0 +1,33 @@
+.step {
+	$self: &;
+	counter-reset: step_ctr;
+
+	&__item {
+		box-sizing: border-box;
+		background-color: rgba(255, 255, 255, 0.08);
+		border: 1px solid rgba(255,255,255,0.16);
+		backdrop-filter: blur(30px);
+		border-radius: 8px;
+		color: #fff;
+		padding: 32px 32px 20px;
+		display: flex;
+		flex-flow: column nowrap;
+
+		&::before {
+			display: block;
+			counter-increment: step_ctr;
+			content: "0" counter(step_ctr);
+			margin-bottom: 16px;
+			font-family: 'MK', sans-serif;
+			line-height: 130%;
+			color: #FE9E34;
+			font-size: 20px;
+			padding-bottom: 20px;
+			margin-bottom: auto;
+		}
+
+		strong {
+			font-family: "PLB", sans-serif;
+		}
+	}
+}

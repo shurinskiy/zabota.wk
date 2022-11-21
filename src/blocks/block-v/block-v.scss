@@ -1,0 +1,80 @@
+.block-v {
+	$self: &;
+	display: flex;
+	gap: 16px;
+
+	&__side {
+		box-sizing: border-box;
+		border-radius: 16px;
+		background-color: #fff;
+		padding: 80px 40px;
+		flex-grow: 1;
+	}
+
+	&__title {
+		font-family: "PLB", sans-serif;
+		text-transform: uppercase;
+		font-size: 32px;
+		color: #181818;
+		margin-bottom: 20px;
+		max-width: 900px;
+	}
+	
+	&__button {
+		margin-bottom: 24px;
+		
+		&.button {
+			font-family: "PLB", sans-serif;
+			font-size: 14px;
+			text-transform: uppercase;
+			background-color: #F2F2F2;
+			color: #181818;
+		}
+	}
+	
+	&__note {
+		max-width: 900px;
+	}
+
+	&__video {
+		position: relative;
+		border-radius: 16px;
+		overflow: hidden;
+		width: 300px;
+		flex-shrink: 0;
+
+		&::before {
+			display: block;
+			content: '';
+			position: absolute;
+			z-index: 1;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			background-color: rgba(0, 0, 0, 0.5);
+			cursor: pointer;
+		}
+
+		&::after {
+			display: block;
+			content: '';
+			width: 48px;
+			height: 48px;
+			background: url('#{$images-path}icons-sprite.svg#icon-play-view-white') 55% center / 11px 16px no-repeat #FE9E34;
+			border-radius: 50%;
+			position: absolute;
+			z-index: 2;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			cursor: pointer;
+		}
+
+		video {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}

@@ -1,0 +1,39 @@
+.resume {
+	$self: &;
+	box-sizing: border-box;
+	background-color: #191919;
+	border-radius: 16px;
+	padding: 45px 30px 55px;
+
+	&::before {
+		display: block;
+		content: '';
+		height: 33px;
+		width: 40px;
+		background: url('#{$images-path}icons-sprite.svg#icon-down-view-orange') center / contain no-repeat transparent;
+		margin: 0 auto 40px;
+	}
+
+	&__title {
+		text-align: center;
+		max-width: 520px;
+		margin: 0 auto 40px;
+	}
+
+	&__buttons {
+		width: 100%;
+		max-width: 520px;
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 16px;
+	}
+
+	&__button {
+		grid-column: span 1;
+
+		&:last-child {
+			grid-column: span 2;
+		}
+	}
+}
