@@ -59,6 +59,28 @@
 		padding-bottom: 50px;
 	}
 
+	&__line {
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 40px;
+
+		svg {
+
+			rect {
+				transition: 1.5s;
+			}
+
+			&:hover rect {
+				width: 2500px;
+				height: 2500px;
+				x: -50px;
+				y: 0;
+			}
+		}
+	}
+
 	&__ask-arrow {
 		transition: transform 0.3s;
 
