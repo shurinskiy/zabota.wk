@@ -44,6 +44,11 @@
 		color: #fff;
 		border: none;
 		cursor: pointer;
+		transition: background-color 0.3s;
+
+		&:hover {
+			background-color: #ffb82e;
+		}
 		
 		@include media('<=sm') {
 			width: 125px;

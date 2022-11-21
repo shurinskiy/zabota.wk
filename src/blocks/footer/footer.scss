@@ -33,14 +33,22 @@
 		text-align: center;
 		font-size: calc(40px + 50 * (100vw / 1920));
 		margin-bottom: 10px;
-	}
 
+		@include media('<=xxs') {
+			font-size: 40px;
+		}
+	}
+	
 	&__suggest {
 		color: #fff;
 		max-width: 490px;
 		margin: 0 auto 50px;
 		font-size: 20px;
 		text-align: center;
+
+		@include media('<=xxs') {
+			font-size: 16px;
+		}
 	}
 
 	&__ask {
@@ -61,6 +69,10 @@
 		&#arr-left {
 			transform: translateX(500px);
 		}
+
+		@include media('<=md') {
+			display: none;
+		}
 	}
 
 	&__ask-button {
@@ -70,7 +82,7 @@
 		width: 310px;
 		height: 310px;
 		box-shadow: 5px 13px 43px rgba(255, 119, 76, 0.3);
-		background: linear-gradient(32deg, #EF711D -14%, #FE9E34 100%);
+		background-color: #e97629;
 		border-radius: 50%;
 		color: #fff;
 		display: flex;
@@ -81,6 +93,7 @@
 		text-align: center;
 		flex-shrink: 0;
 		margin: 0 30px;
+		transition: background-color 0.3s;
 		
 		&::before {
 			display: block;
@@ -89,6 +102,10 @@
 			height: 35px;
 			background: url('#{$images-path}icons-sprite.svg#icon-plus-view-white') center / contain no-repeat transparent;
 			margin-bottom: 8px;
+		}
+
+		&:hover {
+			background-color: #ffb82e;
 		}
 		
 		@include media('<=lg') {
@@ -110,11 +127,19 @@
 		align-items: center;
 		padding: 32px 0;
 		justify-content: space-between;
+
+		@include media('<=md') {
+			flex-flow: column nowrap;
+		}
 	}
 	
 	&__socials {
 		display: flex;
 		align-items: center;
+		
+		@include media('<=md') {
+			margin: 0 0 20px;
+		}
 	}
 
 	&__social {
@@ -123,10 +148,18 @@
 	
 	&__phone {
 		margin-left: 16px;
+		
+		@include media('<=md') {
+			margin: 0;
+		}
 	}
-
+	
 	&__mail {
 		margin-right: 30px;
+		
+		@include media('<=md') {
+			margin: 0 0 20px;
+		}
 	}
 
 	&__call {
@@ -138,29 +171,75 @@
 		align-items: center;
 		justify-content: space-between;
 		color: #777;
-		padding: 50px 0 30px;
+		padding: 45px 0 30px;
+		
+		@include media('<=md') {
+			flex-flow: column nowrap;
+		}
 	}
 
 	&__politics {
 		color: inherit;
 		text-decoration: underline;
+		
+		@include media('<=md') {
+			text-align: center;
+			margin: 0 0 20px;
+		}
 	}
 	
 	&__up {
 		color: inherit;
+		transform: translateX(70px);
+		text-align: center;
+		
+		&::before {
+			display: block;
+			content: '';
+			width: 16px;
+			height: 13px;
+			background: url('#{$images-path}icons-sprite.svg#icon-up-small-view-dark') center / contain no-repeat transparent;
+			margin: 0 auto 6px;
+		}
+		
+		@include media('<=md') {
+			transform: none;
+			margin-bottom: 20px;
+			order: -1;
+		}
 	}
 
 	&__agency {
 		text-align: right;
+		
+		@include media('<=md') {
+			text-align: center;
+		}
 		
 		span {
 			display: block;
 		}
 		
 		a {
-			display: block;
+			display: flex;
 			color: inherit;
 			text-decoration: underline;
+			align-items: center;
+			justify-content: flex-end;
+			height: 40px;
+
+			&::before {
+				display: block;
+				content: '';
+				width: 30px;
+				height: 30px;
+				background: url('#{$images-path}agency-logo.svg') center / auto no-repeat transparent;
+				margin-right: 10px;
+			}
+		
+			@include media('<=md') {
+				justify-content: center;
+			}
 		}
 	}
 }
