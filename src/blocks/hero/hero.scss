@@ -2,7 +2,7 @@
 	$self: &;
 	position: relative;
 	background: url('#{$images-path}hero-bg-bot.jpg') center / cover no-repeat transparent;
-	padding-top: 100px;
+	padding: 100px 0 16px;
 
 	&::before {
 		display: block;

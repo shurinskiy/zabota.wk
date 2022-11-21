@@ -7,8 +7,6 @@
 		padding-top: 70px;
 	}
 
-	margin-bottom: 700px;
-
 	&::before {
 		display: block;
 		content: '';
@@ -127,6 +125,10 @@
 
 			#{$self}__item-info {
 				display: flex;
+			}
+
+			@include media('<=xs') {
+				transform: none;
 			}
 		}
 

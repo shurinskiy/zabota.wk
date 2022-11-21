@@ -1,6 +1,7 @@
 .reason {
 	$self: &;
 	position: relative;
+	z-index: 2;
 	margin-bottom: -160px;
 	
 	@include media('<=sm') {
@@ -8,8 +9,6 @@
 	}
 
 	&__container {
-		position: relative;
-		z-index: 2;
 		padding-top: 380px;
 		
 		@include media('<=md') {

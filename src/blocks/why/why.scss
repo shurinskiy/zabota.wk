@@ -2,6 +2,9 @@
 	$self: &;
 	background-color: #fff;
 	border-radius: 24px;
+	position: relative;
+	z-index: 2;
+	margin-top: -16px;
 
 	&__container {
 		padding-top: 95px;

@@ -33,6 +33,18 @@
 		text-fill-color: transparent;
 		color: #fff;
 		margin-bottom: 35px;
+
+		@include media('<=md') {
+			font-size: 50px;
+		}
+
+		@include media('<=xxs') {
+			font-size: 42px;
+		}
+
+		@include media('<=xxxs') {
+			font-size: 38px;
+		}
 	}
 
 	&__promise {
