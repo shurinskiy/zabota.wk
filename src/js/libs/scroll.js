@@ -210,3 +210,42 @@ export const makeParallax = (items, cls = "parallax") => {
 		translateY();
 	}
 }
+
+/* 
+* Плавная прокрутка к заданному элементу 
+* @вызов:
+* 
+import { scrollToId } from "../../js/libs/scroll";
+scrollToId(document.querySelectorAll('a[href^="#"]'));
+* 
+*/
+
+export const scrollToId = (items) => {
+	items.forEach(item => {
+		item.addEventListener('click', (e) => {
+			e.preventDefault();
+			document.getElementById(item.getAttribute('href').substring(1)).scrollIntoView({
+				behavior: 'smooth',
+				block: 'start'
+			});
+		});
+	});		
+}
+
+/* 
+* Плавная прокрутка к верху страницы
+* @вызов:
+* 
+import { scrollToTop } from "../../js/libs/scroll";
+scrollToTop(document.querySelector('a[href^="top"]'));
+* 
+*/
+
+export const scrollToTop = (item) => {
+	if (item) {
+		item.addEventListener('click', (e) => {
+			e.preventDefault();
+			window.scrollTo({ top: 0, behavior: 'smooth' });
+		});
+	}
+}

@@ -36,5 +36,17 @@ gsap.registerPlugin(ScrollTrigger);
 
 	breakpoint.addEventListener('change', breakpointChecker);
 	breakpointChecker();
+
+	gsap.from('.hero__title', {
+		duration: 1.2,
+		opacity: 0,
+		y: 100,
+	});
 	
+	gsap.from('.hero__appeal', {
+		duration: 1.2,
+		opacity: 0,
+		y: 100,
+	});
+
 })();
