@@ -5,4 +5,12 @@
 	font-family: "PLB", sans-serif;
 	text-transform: uppercase;
 	line-height: 0.9;
+	
+	@include media('<=lg') {
+		font-size: 32px;
+	}
+	
+	@include media('<=xxxs') {
+		font-size: 28px;
+	}
 }

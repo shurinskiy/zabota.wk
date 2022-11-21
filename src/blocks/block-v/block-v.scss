@@ -2,6 +2,10 @@
 	$self: &;
 	display: flex;
 	gap: 16px;
+		
+	@include media('<=sm') {
+		flex-flow: column nowrap;
+	}
 
 	&__side {
 		box-sizing: border-box;
@@ -9,6 +13,14 @@
 		background-color: #fff;
 		padding: 80px 40px;
 		flex-grow: 1;
+		
+		@include media('<=md') {
+			padding: 32px;
+		}
+	
+		@include media('<=xxxs') {
+			padding: 30px 20px;
+		}
 	}
 
 	&__title {
@@ -18,6 +30,18 @@
 		color: #181818;
 		margin-bottom: 20px;
 		max-width: 900px;
+		
+		@include media('<=lg') {
+			font-size: 26px;
+		}
+		
+		@include media('<=md') {
+			font-size: 22px;
+		}
+		
+		@include media('<=xxxs') {
+			font-size: 18px;
+		}
 	}
 	
 	&__button {
@@ -42,7 +66,18 @@
 		overflow: hidden;
 		width: 300px;
 		flex-shrink: 0;
-
+		
+		@include media('<=md') {
+			width: 230px;
+		}
+		
+		@include media('<=sm') {
+			height: 250px;
+			width: 100%;
+			max-width: 400px;
+			margin: 0 auto;
+		}
+	
 		&::before {
 			display: block;
 			content: '';

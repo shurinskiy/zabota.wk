@@ -4,6 +4,10 @@
 	background-color: #191919;
 	border-radius: 16px;
 	padding: 45px 30px 55px;
+	
+	@include media('<=xxxs') {
+		padding: 30px 20px;
+	}
 
 	&::before {
 		display: block;
@@ -27,13 +31,21 @@
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		grid-gap: 16px;
+		
+		@include media('<=xs') {
+			grid-template-columns: 1fr;
+		}
 	}
 
 	&__button {
 		grid-column: span 1;
-
+		
 		&:last-child {
 			grid-column: span 2;
+		}
+		
+		@include media('<=xs') {
+			grid-column: span 1 !important;
 		}
 	}
 }

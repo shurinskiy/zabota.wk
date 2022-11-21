@@ -5,4 +5,16 @@
 	font-size: 22px;
 	border-left: 2px solid #FE9E34;
 	padding: 15px 15px 15px 30px;
+
+	@include media('<=lg') {
+		font-size: 20px;
+	}
+
+	@include media('<=md') {
+		font-size: 18px;
+	}
+
+	@include media('<=xs') {
+		font-size: 16px;
+	}
 }
