@@ -4,7 +4,7 @@
 	width: 120px;
 	height: 120px;
 	position: fixed;
-	background-color: rgba(255, 255, 255, 0.06);
+	background-color: rgba(110, 110, 110, 0.2);
 	backdrop-filter: blur(20px);
 	top: 55px;
 	left: -55px;
@@ -14,7 +14,11 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	transition: all, .3s;
+	transition: transform 0.15s;
+
+	@include media('<=sm') {
+		display: none;
+	}
 	
 	&:before {
 		position: absolute;
