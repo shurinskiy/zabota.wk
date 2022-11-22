@@ -1,0 +1,107 @@
+.tab {
+	$self: &;
+	display: flex;
+	align-items: flex-start;
+	gap: 16px;
+
+	@include media('<=md') {
+		display: block;		
+	}
+
+	&__buttons {
+		box-sizing: border-box;
+		width: 390px;
+		flex-shrink: 0;
+		border-radius: 16px;
+		background-color: #fff;
+		padding: 30px 24px 20px;
+
+		@include media('<=md') {
+			display: none;
+		}
+	}
+	
+	&__button {
+		@extend %reset-button;
+		display: flex;
+		align-items: center;
+		font-size: 16px;
+		font-family: "PLB", sans-serif;
+		height: 56px;
+		width: 100%;
+		text-align: left;
+		position: relative;
+		padding: 10px 10px 10px 60px;
+		border-radius: 24px;
+		transition: background-color 0.2s;
+		margin-bottom: 10px;
+
+		&::before {
+			display: block;
+			content: '';
+			width: 32px;
+			height: 32px;
+			background-color: #f2f2f2;
+			border-radius: 50%;
+			position: absolute;
+			left: 16px;
+			top: 50%;
+			transform: translateY(-50%);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 20px 20px;
+		}
+		
+		&:hover, &.active {
+			background-color: #333;
+			color: #fff;
+		}
+
+		&_lamp::before {
+			background-image: url('#{$images-path}icons-sprite.svg#icon-lamp-view-dark');
+		}
+		
+		&_graph::before {
+			background-image: url('#{$images-path}icons-sprite.svg#icon-graph-view-dark');
+		}
+		
+		&_wallet::before {
+			background-image: url('#{$images-path}icons-sprite.svg#icon-wallet-view-dark');
+		}
+		
+		&_piece::before {
+			background-image: url('#{$images-path}icons-sprite.svg#icon-piece-view-dark');
+		}
+	}
+	
+	&__content {
+		box-sizing: border-box;
+		flex-grow: 1;
+		border-radius: 16px;
+		background-color: #fff;
+		padding: 15px 55px 40px;
+	}
+	
+	&__block {
+		display: none;
+		@keyframes tab_show {
+			from { opacity: 0; }
+			to { opacity: 1; }
+		}
+		animation: tab_show 0.3s;
+
+		&.active {
+			display: block;
+			
+			@include media('<=md') {
+				.faq__items {
+					display: block;
+				}
+			}
+		}
+		
+		@include media('<=md') {
+			display: block;
+		}
+	}
+}

@@ -8,3 +8,5 @@ import "../blocks/footer/footer.js";
 import "../blocks/block-a/block-a.js";
 import "../blocks/block-v/block-v.js";
 import "../blocks/page/page.js";
+import "../blocks/faq/faq.js";
+import "../blocks/tab/tab.js";

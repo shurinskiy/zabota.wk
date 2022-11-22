@@ -78,14 +78,14 @@
 		background-color: #F2F2F2;
 		border-radius: 8px 8px 24px 24px;
 		padding: 55px 40px;
-		margin-bottom: 12px;
+		margin-bottom: 20px;
 		
 		@include media('<=xs') {
 			padding: 55px 20px;
 		}
 	}
 
-	&__blocks {
+	&__layout {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		grid-gap: 16px;
@@ -94,22 +94,47 @@
 		@include media('<=xs') {
 			grid-template-columns: 1fr;
 		}
+
+		&_p1 {
+			#{$self}__block {
+		
+				&:first-child {
+					grid-column: span 2;
+				}
+				
+				&:last-child {
+					grid-column: span 2;
+				}
+				
+				@include media('<=xs') {
+					grid-column: span 1 !important;
+				}
+			}
+		}
+
+		&_gr {
+			max-width: 1400px;
+		
+			@include media('<=md') {
+				grid-template-columns: 1fr;
+			}
+
+			#{$self}__block {
+				
+			}
+		}
+
+		&_tab {
+			display: block;
+			
+			#{$self}__block {
+
+			}
+		}
 	}
 
 	&__block {
 		grid-column: span 1;
-		
-		&:first-child {
-			grid-column: span 2;
-		}
-		
-		&:last-child {
-			grid-column: span 2;
-		}
-		
-		@include media('<=xs') {
-			grid-column: span 1 !important;
-		}
 	}
 
 	&__resume {

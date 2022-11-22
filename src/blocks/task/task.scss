@@ -141,6 +141,10 @@
 
 	&__remains {
 		margin-top: -10px;
+
+		#{$self}__item:last-child {
+			margin-bottom: 0;
+		}
 	}
 	
 	&__toggle {

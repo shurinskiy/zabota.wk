@@ -10,7 +10,11 @@
 		font-size: 32px;
 	}
 	
-	@include media('<=xxxs') {
+	@include media('<=xxs') {
 		font-size: 28px;
+	}
+	
+	@include media('<=xxxs') {
+		font-size: 26px;
 	}
 }

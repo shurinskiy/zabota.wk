@@ -14,7 +14,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	transition: transform 0.15s;
+	transition: transform 0.2s;
 
 	@include media('<=sm') {
 		display: none;

@@ -1,0 +1,78 @@
+.faq {
+	$self: &;
+
+	&__title {
+		font-family: "PLB", sans-serif;
+		text-transform: uppercase;
+		font-size: 24px;
+		height: 75px;
+		display: flex;
+		align-items: center;
+
+		@include media('<=md') {
+			cursor: pointer;
+			clear: both;
+		}
+	}
+
+	&__items {
+
+		@include media('<=md') {
+			display: none;
+		}
+	}
+
+	&__item {
+		
+		&:not(:last-child) {
+			border-bottom: 1px solid #ebebeb;
+		}
+	}
+
+	&__cap {
+		font-family: "PLB", sans-serif;
+		cursor: pointer;
+		padding: 30px 60px 30px 0;
+		position: relative;
+
+		&::after {
+			display: block;
+			content: '';
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			background: url('#{$images-path}icons-sprite.svg#icon-down-view-dark') center / 12px 9px no-repeat #f2f2f2;
+			transition: background-color 0.2s;
+		}
+
+		&.opened::after {
+			background-color: #333;
+			background-image: url('#{$images-path}icons-sprite.svg#icon-up-small-view-white');
+		}
+	}
+
+	&__text {
+		display: none;
+		margin-bottom: 20px;
+		padding: 16px 24px;
+		background-color: #f4f4f4;
+		border-radius: 8px;
+		position: relative;
+		
+		&::before {
+			display: block;
+			content: '';
+			width: 11px;
+			height: 11px;
+			background-color: #f4f4f4;
+			transform: rotate(45deg) translateY(-50%);
+			position: absolute;
+			left: 24px;
+			top: 0;
+		}
+	}
+}
