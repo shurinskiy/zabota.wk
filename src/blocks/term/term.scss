@@ -1,0 +1,55 @@
+.term {
+	$self: &;
+
+	&__gift {
+		max-width: 590px;
+
+		@include media('<=xs') {
+			max-width: none;
+		}
+	}
+	
+	&__title {
+		font-family: "PLB", sans-serif;
+		font-size: 24px;
+		text-transform: uppercase;
+		margin-bottom: 16px;
+		max-width: 360px;
+
+		@include media('<=xs') {
+			max-width: none;
+		}
+		
+		span { color: #FE9E34; }
+	}
+	
+	&__point {
+		display: inline-flex;
+		margin: 0 16px 12px 0;
+
+		&::before {
+			display: block;
+			content: '';
+			height: 20px;
+			width: 20px;
+			background-color: #4f4f4f;
+			border-radius: 6px;
+			margin-right: 8px;
+			background: url('#{$images-path}icons-sprite.svg#icon-check-view-white') center / 11px 8px no-repeat #4f4f4f;
+			flex-shrink: 0;
+		}
+	}
+	
+	&__additional {
+		max-width: 540px;
+
+		@include media('<=xs') {
+			max-width: none;
+		}
+	}
+
+	&__note {
+		padding: 8px 24px;
+		border-left: 1px solid #FE9E34;
+	}
+}

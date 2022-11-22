@@ -1,6 +1,8 @@
 .page {
 	$self: &;
+	box-sizing: border-box;
 	padding-top: 50px;
+	flex-grow: 1;
 	position: relative;
 	background-color: #1D1D1D;
 	color: #181818;

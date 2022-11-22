@@ -10,3 +10,4 @@ import "../blocks/block-v/block-v.js";
 import "../blocks/page/page.js";
 import "../blocks/faq/faq.js";
 import "../blocks/tab/tab.js";
+import "../blocks/rate/rate.js";
