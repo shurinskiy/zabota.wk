@@ -40,99 +40,158 @@
 					<thead>
 						<tr>
 							<th colspan="2">Пакет тарифов</th>
-							<th>Подарок</th>
-							<th>Minimum</th>
-							<th>Maximum</th>
-							<th>Pro</th>
+							<th class="rate__tariff-gift">Подарок</th>
+							<th class="rate__tariff-min">Minimum</th>
+							<th class="rate__tariff-max active">Maximum</th>
+							<th class="rate__tariff-pro">Pro</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
-							<td class="rate__cost-title" colspan="2">
-								<h3>Стоимость пакета (руб.)</h3>
-								<span>Разработка основы бота входит во все пакеты)</span>
+							<td colspan="2" data-title="Пакет тарифов">
+								<div class="rate__cost-title">
+									<h3>Стоимость пакета (руб.)</h3>
+									<span>Разработка основы бота входит во все пакеты)</span>
+								</div>
 							</td>
-							<td class="rate__cost">
+							<td class="rate__cost rate__tariff-gift" data-title="Подарок">
 								<strong>3 000 р.</strong>
-								<button>выбрать</button>
+								<button id="rate__tariff-gift">выбрать</button>
 							</td>
-							<td class="rate__cost">
+							<td class="rate__cost rate__tariff-min" data-title="Minimum">
 								<strong>14 822 р.</strong>
-								<button>выбрать</button>
+								<button id="rate__tariff-min">выбрать</button>
 							</td>
-							<td class="rate__cost">
+							<td class="rate__cost rate__tariff-max active" data-title="Maximum">
 								<strong>25 837 р.</strong>
-								<button>выбрать</button>
+								<button id="rate__tariff-max">выбрать</button>
 							</td>
-							<td class="rate__cost">
+							<td class="rate__cost rate__tariff-pro" data-title="Pro">
 								<strong>35 208 р.</strong>
-								<button>выбрать</button>
+								<button id="rate__tariff-pro">выбрать</button>
 							</td>
 						</tr>
 						<tr>
-							<td class="rate__discount" colspan="2">Размер скидки на дальнейшие доработки и связаные услуги по приобретенному боту</td>
- 							<td>без скидки</td>
-							<td class="rate__green"><strong>18%</strong></td>
-							<td class="rate__green"><strong>27%</strong></td>
-							<td class="rate__green"><strong>33%</strong></td>
+							<td colspan="2" data-title="Пакет тарифов">Размер скидки на дальнейшие доработки и связаные услуги по приобретенному боту</td>
+ 							<td class="rate__tariff-gift" data-title="Подарок">без скидки</td>
+							<td class="rate__green rate__tariff-min" data-title="Minimum"><strong>18%</strong></td>
+							<td class="rate__green rate__tariff-max active" data-title="Maximum"><strong>27%</strong></td>
+							<td class="rate__green rate__tariff-pro" data-title="Pro"><strong>33%</strong></td>
 						</tr>
 						<tr>
-							<td rowspan="5"><strong>РАЗРАБОТКА БОТА</strong></td>
+							<td rowspan="5" data-title="Пакет тарифов"><h4>Разра&shy;ботка бота</h4></td>
 							<td>Добавить озвучку бота диктором или вашу озвучку за 1 блок</td>
-							<td>700 р.</td>
-							<td class="rate__green">входит 3 блока</td>
-							<td class="rate__green">входит 3 блока</td>
-							<td class="rate__green">входит 3 блока</td>
+							<td class="rate__tariff-gift" data-title="Подарок">700 р.</td>
+							<td class="rate__green rate__tariff-min" data-title="Minimum">входит 3 блока</td>
+							<td class="rate__green rate__tariff-max active" data-title="Maximum">входит 3 блока</td>
+							<td class="rate__green rate__tariff-pro" data-title="Pro">входит 3 блока</td>
 						</tr>
 						<tr>
+							<td class="rate__hidden" data-title="Пакет тарифов"><h4>Разработка бота</h4></td>
 							<td>Интеграция бота с google-таблицами</td>
-							<td>5000 р. </td>
-							<td class="rate__green">входит</td>
-							<td class="rate__green">входит 3 блока</td>
-							<td class="rate__green">входит</td>
+							<td class="rate__tariff-gift" data-title="Подарок">5000 р. </td>
+							<td class="rate__green rate__tariff-min" data-title="Minimum">входит</td>
+							<td class="rate__green rate__tariff-max active" data-title="Maximum">входит 3 блока</td>
+							<td class="rate__green rate__tariff-pro" data-title="Pro">входит</td>
 						</tr>
+							<td class="rate__hidden" data-title="Пакет тарифов"><h4>Разработка бота</h4></td>
 							<td>Создание/корректировка скрипта для бота верификатора</td>
-							<td>3500 р.</td>
-							<td>2870 р.</td>
-							<td class="rate__green">входит 3 блока</td>
-							<td class="rate__green">входит</td>
+							<td class="rate__tariff-gift" data-title="Подарок">3500 р.</td>
+							<td class="rate__tariff-min" data-title="Minimum">2870 р.</td>
+							<td class="rate__green rate__tariff-max active" data-title="Maximum">входит 3 блока</td>
+							<td class="rate__green rate__tariff-pro" data-title="Pro">входит</td>
 						</tr>
 						</tr>
+							<td class="rate__hidden" data-title="Пакет тарифов"><h4>Разработка бота</h4></td>
 							<td>Настройка отправки смс после разговора с ботом</td>
-							<td>5000 р.</td>
-							<td>4100 р.</td>
-							<td>входит 3 блока</td>
-							<td class="rate__green">3850 р.</td>
+							<td class="rate__tariff-gift" data-title="Подарок">5000 р.</td>
+							<td class="rate__tariff-min" data-title="Minimum">4100 р.</td>
+							<td class="rate__tariff-max active" data-title="Maximum">входит 3 блока</td>
+							<td class="rate__green rate__tariff-pro" data-title="Pro">3850 р.</td>
 						</tr>
 						</tr>
+							<td class="rate__hidden" data-title="Пакет тарифов"><h4>Разработка бота</h4></td>
 							<td>Дополнительные блоки для бота</td>
-							<td>2000 р.</td>
-							<td>1640 р.</td>
-							<td>входит 3 блока</td>
-							<td class="rate__green">1540 р.</td>
+							<td class="rate__tariff-gift">2000 р.</td>
+							<td class="rate__tariff-min" data-title="Minimum">1640 р.</td>
+							<td class="rate__tariff-max active" data-title="Maximum">входит 3 блока</td>
+							<td class="rate__green rate__tariff-pro" data-title="Pro">1540 р.</td>
 						</tr>
 						<tr>
-							<td><strong>СОПРОВОЖДЕНИЕ БОТА</strong></td>
+							<td data-title="Пакет тарифов"><h4>Сопровож&shy;дение бота</h4></td>
 							<td>Полный аккаунтинг и поддержка</td>
-							<td>7500 р.</td>
-							<td>6150 р</td>
-							<td class="rate__green">входит</td>
-							<td class="rate__green">входит</td>
+							<td class="rate__tariff-gift" data-title="Подарок">7500 р.</td>
+							<td class="rate__tariff-min" data-title="Minimum">6150 р</td>
+							<td class="rate__green rate__tariff-max active" data-title="Maximum">входит</td>
+							<td class="rate__green rate__tariff-pro" data-title="Pro">входит</td>
 						</tr>
 						<tr>
-							<td rowspan="2"><strong>БАЗА <br> ДЛЯ ОБЗВОНА</strong></td>
+							<td rowspan="2" data-title="Пакет тарифов"><h4>База <br> для обзвона</h4></td>
 							<td>Интеграция бота с google-таблицами</td>
-							<td>—</td>
-							<td class="rate__green">входит 5000 шт.</td>
-							<td class="rate__green">входит 5000 шт.</td>
-							<td class="rate__green">входит 10000 шт.</td>
+							<td class="rate__tariff-gift" data-title="Подарок">—</td>
+							<td class="rate__green rate__tariff-min" data-title="Minimum">входит 5000 шт.</td>
+							<td class="rate__green rate__tariff-max active" data-title="Maximum">входит 5000 шт.</td>
+							<td class="rate__green rate__tariff-pro" data-title="Pro">входит 10000 шт.</td>
 						</tr>
 						<tr>
+							<td class="rate__hidden" data-title="Пакет тарифов"><h4>База <br> для обзвона</h4></td>
 							<td>Создание/корректировка скрипта для бота верификатора</td>
-							<td class="rate__green">входит 3000 р.</td>
-							<td class="rate__green">входит 4000 р.</td>
-							<td class="rate__green">входит 4000 р.</td>
-							<td class="rate__green">входит 8000 р.</td>
+							<td class="rate__green rate__tariff-gift" data-title="Подарок">входит 3000 р.</td>
+							<td class="rate__green rate__tariff-min" data-title="Minimum">входит 4000 р.</td>
+							<td class="rate__green rate__tariff-max active" data-title="Maximum">входит 4000 р.</td>
+							<td class="rate__green rate__tariff-pro" data-title="Pro">входит 8000 р.</td>
+						</tr>
+						<tr class="rate__toggle">
+							<td colspan="6"><h3>Дополнительные услуги</h3></td>
+						</tr>
+						<tr>
+							<td colspan="2">Новый контакт для обзвона</td>
+							<td class="rate__tariff-gift" data-title="Подарок">1.5 р.</td>
+							<td class="rate__tariff-min" data-title="Minimum">1.1 р.</td>
+							<td class="rate__tariff-max active" data-title="Maximum">1 р.</td>
+							<td class="rate__tariff-pro" data-title="Pro">476 р.</td>
+						</tr>
+						<tr>
+							<td colspan="2">Озвучка дополнительного блока</td>
+							<td class="rate__tariff-gift" data-title="Подарок">700 р.</td>
+							<td class="rate__tariff-min" data-title="Minimum">574 р.</td>
+							<td class="rate__tariff-max active" data-title="Maximum">539 р.</td>
+							<td class="rate__tariff-pro" data-title="Pro">476 р.</td>
+						</tr>
+						<tr>
+							<td colspan="2">Индивидуальные дорабоки, цена за час</td>
+							<td class="rate__tariff-gift" data-title="Подарок">3700 р.</td>
+							<td class="rate__tariff-min" data-title="Minimum">3034 р.</td>
+							<td class="rate__tariff-max active" data-title="Maximum">2849 р.</td>
+							<td class="rate__tariff-pro" data-title="Pro">2516 р.</td>
+						</tr>
+						<tr>
+							<td colspan="2">Подключение своей телефонии</td>
+							<td class="rate__tariff-gift" data-title="Подарок">7000 р.</td>
+							<td class="rate__tariff-min" data-title="Minimum">5740 р.</td>
+							<td class="rate__tariff-max active" data-title="Maximum">5390 р.</td>
+							<td class="rate__tariff-pro" data-title="Pro">4760 р.</td>
+						</tr>
+						<tr>
+							<td colspan="2">Настройка переадресации с бота на менеджера</td>
+							<td class="rate__tariff-gift" data-title="Подарок">4800 р.</td>
+							<td class="rate__tariff-min" data-title="Minimum">3936 р.</td>
+							<td class="rate__tariff-max active" data-title="Maximum">3696 р.</td>
+							<td class="rate__tariff-pro" data-title="Pro">3264 р.</td>
+						</tr>
+						<tr>
+							<td colspan="2">Интеграция бота с Амо CRM или Битрикс</td>
+							<td class="rate__tariff-gift" data-title="Подарок">10500 р.</td>
+							<td class="rate__tariff-min" data-title="Minimum">8610 р.</td>
+							<td class="rate__tariff-max active" data-title="Maximum">8085 р.</td>
+							<td class="rate__tariff-pro" data-title="Pro">7140 р.</td>
+						</tr>
+						<tr>
+							<td colspan="2">Интеграция бота с другой CRM</td>
+							<td class="rate__tariff-gift" data-title="Подарок">23500 р.</td>
+							<td class="rate__tariff-min" data-title="Minimum">19270 р.</td>
+							<td class="rate__tariff-max active" data-title="Maximum">18095 р.</td>
+							<td class="rate__tariff-pro" data-title="Pro">15980 р.</td>
 						</tr>
 					</tbody>
 				</table>
