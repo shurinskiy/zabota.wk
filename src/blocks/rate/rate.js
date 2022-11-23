@@ -1,7 +1,10 @@
 (() => {
 
 	$('.rate__toggle').on('click', function() {
-		$(this).nextAll('tr').toggleClass('showed');
+		$(this)
+			.toggleClass('showed')
+			.nextAll('tr')
+			.toggleClass('showed');
 	});
 
 	$('.rate__cost').find('button').on('click', function() {
