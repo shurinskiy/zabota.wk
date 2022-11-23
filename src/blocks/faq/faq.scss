@@ -8,10 +8,15 @@
 		height: 75px;
 		display: flex;
 		align-items: center;
-
+		
 		@include media('<=md') {
 			cursor: pointer;
 			clear: both;
+		}
+		
+		@include media('<=xxxs') {
+			height: 55px;
+			font-size: 20px;
 		}
 	}
 

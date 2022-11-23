@@ -79,7 +79,19 @@
 		flex-grow: 1;
 		border-radius: 16px;
 		background-color: #fff;
-		padding: 15px 55px 40px;
+		padding: 15px 55px 30px;
+		
+		@include media('<=xs') {
+			padding: 15px 30px 30px;
+		}
+
+		@include media('<=xxs') {
+			padding: 15px 20px 30px;
+		}
+
+		@include media('<=xxxs') {
+			padding: 15px 15px 30px;
+		}
 	}
 	
 	&__block {
