@@ -11,3 +11,5 @@ import "../blocks/page/page.js";
 import "../blocks/faq/faq.js";
 import "../blocks/tab/tab.js";
 import "../blocks/rate/rate.js";
+import "../blocks/resume/resume.js";
+import "../blocks/title/title.js";

@@ -1,3 +1,7 @@
+import Inputmask from "inputmask";
+import scrollLock from 'scroll-lock';
+import { addUnderlay, makeModalFrame } from "../../js/libs/modal";
+
 (() => {
 	const header = document.querySelector('.header');
 	
@@ -8,4 +12,16 @@
 		});
 	}
 
+	addUnderlay('modal');
+	makeModalFrame({ el: '.header__button', scrollLock }, function() {
+		Inputmask({ 
+			"mask": "+7 (999) 999-99-99", 
+			showMaskOnHover: false 
+		}).mask(this.querySelectorAll('input[type="tel"]'));
+
+		this.querySelector('.resume__agree [type="checkbox"]').addEventListener('change', () => {
+			this.querySelector('[type="submit"]').toggleAttribute("disabled");
+		});
+	});
+	
 })();

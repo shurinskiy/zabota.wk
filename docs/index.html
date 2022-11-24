@@ -19,11 +19,10 @@
 				<a class="header__socials-item social social_phone" href="./"></a>
 			</div>
 			<a class="header__phone" href="tel:+79800000000">+7 (980)-000-00-00</a>
-			<button class="header__button button button_light">Заказать звонок</button>
+			<button class="header__button button button_light" data-modal="call-order">Заказать звонок</button>
 		</div>
 	</div>
-</header> 
-
+</header>
 <div class="sticky-w">
 
 	<section class="hero">
@@ -66,7 +65,7 @@
 			</div>
 		</div>
 	</section>
-	
+
 	<section class="reason">
 		<div class="reason__container container">
 			<h2 class="reason__title sticky-w__title">Бот <img src="images/title-image.png" alt=""> вам <br> подходит, <br> если:</h2>
@@ -341,7 +340,7 @@
 				<a class="footer__phone" href="tel:+79800000000">+7 (980)-000-00-00</a>
 			</div>
 			<a class="footer__mail button button_light" href="mailto:zabotasupport@yandex.ru"><span>zabotasupport@yandex.ru</span></a>
-			<a class="footer__call button button_light" href="./"><span>Заказать звонок</span></a>
+			<a class="footer__call button button_light" href="./" data-modal="call-order"><span>Заказать звонок</span></a>
 		</div>
 		<div class="footer__bottom">
 			<a class="footer__politics" href="./">Политика <br> конфиденциальности</a>
@@ -354,6 +353,36 @@
 	</div>
 </footer>
 <audio id="audio" src="" controls></audio>
+
+<div class="modal__hidden">
+	<div id="call-order">
+		<div class="page__resume resume">
+			<h2 class="resume__title title">Оставьте свой контакт!</h2>
+			<div class="resume__text">Мы свяжемся с Вами, обсудим детали вашей задачи и расскажем обо всех интересующих вас вопросах</div>
+			<div class="resume__form">
+				<input class="resume__input" type="text" placeholder="ВАШЕ ИМЯ">
+				<input class="resume__input" type="tel" placeholder="ТЕЛЕФОН">
+				<button class="resume__field resume__field_double button button_orange" type="submit" data-modal="order-complete">Отправить</button>
+				<label class="resume__agree">
+					<input type="checkbox" checked>
+					<p>*Вы соглашаетесь с условиями обработки <a href="./">персональных данных</a></p>
+				</label>
+			</div>
+		</div>
+	</div>
+	<div id="order-complete">
+		<div class="complete">
+			<h2 class="complete__title">Мы мигом!</h2>
+			<div class="complete__text">Скоро мы перезвоним Вам <br> и расскажем обо всех интересующих вас вопросах</div>
+			<div class="complete__note">Вы также можете написать нам в мессенджеры, если хотите рассказать больше подробностей вашей о задаче</div>
+			<div class="complete__socials">
+				<a class="complete__social complete__social_wapp" href="./"></a>
+				<a class="complete__social complete__social_tgm" href="./"></a>
+			</div>
+		</div>
+	</div>
+</div> 
+
 <script type="text/javascript" charset="utf-8" src="jquery.min.js"></script>
 <script src="common.js"></script> 
 </body> 

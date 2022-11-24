@@ -172,18 +172,24 @@
 		&.button {
 			padding: 17px;
 			border-radius: 16px;
+			text-transform: none;
+			font-size: 16px;
+			font-family: "PL", sans-serif;
 		}
 		
 		@include media('<=md') {
 			margin: 0 0 20px;
 		}
 	}
-
+	
 	&__call {
-
+		
 		&.button {
 			padding: 17px;
 			border-radius: 16px;
+			text-transform: none;
+			font-size: 16px;
+			font-family: "PL", sans-serif;
 		}
 	}
 

@@ -231,18 +231,47 @@
 			</div>
 			<div class="page__resume resume">
 				<h2 class="resume__title title">Давайте поzаботимся о вашем бизнесе?</h2>
-				<div class="resume__buttons">
-					<a class="resume__button button button_light" href="./">Протестировать бота</a>
-					<a class="resume__button button button_light" href="./">Остались вопросы</a>
-					<a class="resume__button button button_orange" href="./">Да, переходим к стоимости</a>
+				<div class="resume__form">
+					<a class="resume__field button button_light" href="./">Протестировать бота</a>
+					<a class="resume__field button button_light" href="./">Остались вопросы</a>
+					<a class="resume__field resume__field_double button button_orange" href="./">Да, переходим к стоимости</a>
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
 
-
 <audio id="audio" src="" controls></audio>
+
+<div class="modal__hidden">
+	<div id="call-order">
+		<div class="page__resume resume">
+			<h2 class="resume__title title">Оставьте свой контакт!</h2>
+			<div class="resume__text">Мы свяжемся с Вами, обсудим детали вашей задачи и расскажем обо всех интересующих вас вопросах</div>
+			<div class="resume__form">
+				<input class="resume__input" type="text" placeholder="ВАШЕ ИМЯ">
+				<input class="resume__input" type="tel" placeholder="ТЕЛЕФОН">
+				<button class="resume__field resume__field_double button button_orange" type="submit" data-modal="order-complete">Отправить</button>
+				<label class="resume__agree">
+					<input type="checkbox" checked>
+					<p>*Вы соглашаетесь с условиями обработки <a href="./">персональных данных</a></p>
+				</label>
+			</div>
+		</div>
+	</div>
+	<div id="order-complete">
+		<div class="complete">
+			<h2 class="complete__title">Мы мигом!</h2>
+			<div class="complete__text">Скоро мы перезвоним Вам <br> и расскажем обо всех интересующих вас вопросах</div>
+			<div class="complete__note">Вы также можете написать нам в мессенджеры, если хотите рассказать больше подробностей вашей о задаче</div>
+			<div class="complete__socials">
+				<a class="complete__social complete__social_wapp" href="./"></a>
+				<a class="complete__social complete__social_tgm" href="./"></a>
+			</div>
+		</div>
+	</div>
+</div> 
+
 <script type="text/javascript" charset="utf-8" src="jquery.min.js"></script>
 <script src="common.js"></script> 
 </body> 

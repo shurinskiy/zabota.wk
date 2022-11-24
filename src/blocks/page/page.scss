@@ -81,6 +81,7 @@
 		border-radius: 8px 8px 24px 24px;
 		padding: 55px 40px;
 		margin-bottom: 20px;
+		overflow: hidden;
 		
 		@include media('<=xs') {
 			padding: 55px 20px;

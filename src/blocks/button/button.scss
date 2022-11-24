@@ -2,10 +2,8 @@
 	$self: &;
 	@extend %reset-button;
 	position: relative;
-	font-family: 'PL', sans-serif;
-	font-style: normal;
-	font-weight: 400;
-	font-size: 16px;
+	font-family: 'PLB', sans-serif;
+	font-size: 14px;
 	line-height: 90%;
 	letter-spacing: -0.02em;
 	padding: 20px;
@@ -16,6 +14,7 @@
 	text-align: center;
 	transition: background-color 0.3s;
 	backdrop-filter: blur(50px);
+	text-transform: uppercase;
 	
 	&_light {
 		background-color: rgba(243, 243, 243, 0.1);
@@ -30,7 +29,11 @@
 		background-color: rgba(255, 136, 0, 0.8);
 		
 		&:hover {
-			background-color: rgba(255, 255, 255, 0.4);
+			background-color: #ffb82e;
+		}
+
+		&:disabled {
+			background-color: #999;
 		}
 	}
 }

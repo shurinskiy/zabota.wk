@@ -76,7 +76,10 @@
 
 		&.button {
 			padding: 17px;
+			font-size: 16px;
 			border-radius: 16px;
+			text-transform: none;
+			font-family: "PL", sans-serif;
 		}
 
 		@include media('<=sm') {
