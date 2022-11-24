@@ -36,4 +36,12 @@
 			background-color: #999;
 		}
 	}
+
+	&_dark {
+		background-color: rgba(0, 0, 0, 0.9);
+		
+		&:hover {
+			background-color: rgba(80, 80, 80, 0.9);
+		}
+	}
 }

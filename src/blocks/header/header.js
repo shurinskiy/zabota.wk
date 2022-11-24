@@ -22,6 +22,10 @@ import { addUnderlay, makeModalFrame } from "../../js/libs/modal";
 		this.querySelector('.resume__agree [type="checkbox"]').addEventListener('change', () => {
 			this.querySelector('[type="submit"]').toggleAttribute("disabled");
 		});
+
+		this.querySelectorAll('textarea.resume__input').forEach((area) => {
+			area.addEventListener('input', () => area.style.height = Math.max(area.scrollHeight, area.offsetHeight) + 'px');
+		});
 	});
 	
 })();

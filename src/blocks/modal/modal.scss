@@ -44,7 +44,11 @@
 		}
 	}
 	
-	&_order-complete, &_order-success {
+	&_order-complete-1, 
+	&_order-complete-2, 
+	&_order-complete-3, 
+	&_order-complete-4, 
+	&_order-success {
 		#{$self}__body {
 			padding: 64px 20px;
 			max-width: 560px;
@@ -52,6 +56,12 @@
 		
 		#{$self}__content {
 			animation: show_fade 0.3s;
+		}
+	}
+	
+	&_order-complete-4 {
+		#{$self}__body {
+			max-width: 720px;
 		}
 	}
 

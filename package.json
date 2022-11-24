@@ -52,6 +52,7 @@
 	},
 	"dependencies": {
 		"animate-scss": "^3.2.1",
+		"enquire.js": "^2.1.6",
 		"gsap": "^3.11.3",
 		"inputmask": "^5.0.6",
 		"jquery": "^3.6.0",
