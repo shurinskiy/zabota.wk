@@ -3,7 +3,7 @@
 	position: relative;
 	padding-bottom: 40px;
 
-	&::before {
+	/* &::before {
 		display: block;
 		content: '';
 		position: absolute;
@@ -13,7 +13,7 @@
 		background: url('#{$images-path}body-noise.gif') center / auto repeat transparent;
 		opacity: 4%;
 		top: 0;
-	}
+	} */
 
 	&::after {
 		box-sizing: border-box;
@@ -30,6 +30,7 @@
 	&__button {
 		display: block;
 		position: sticky;
+		position: -webkit-sticky;
 		width: 160px;
 		height: 160px;
 		display: flex;
@@ -78,6 +79,7 @@
 
 	&__title {
 		position: sticky;
+		position: -webkit-sticky;
 		top: 50%;
 		transform: translateY(-50%);
 		margin-bottom: calc(3vw + 490px);

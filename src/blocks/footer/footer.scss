@@ -4,7 +4,7 @@
 	position: relative;
 	background: url('#{$images-path}fooger-bg-bot.jpg') center top / cover no-repeat transparent;
 
-	&::before {
+	/* &::before {
 		display: block;
 		content: '';
 		position: absolute;
@@ -14,7 +14,7 @@
 		background: url('#{$images-path}body-noise.gif') center / auto repeat transparent;
 		opacity: 4%;
 		top: 0;
-	}
+	} */
 
 	&__container {
 		position: relative;
@@ -66,8 +66,12 @@
 		justify-content: center;
 		margin-bottom: 40px;
 
-		svg rect {
-			transition: 1.5s;
+		svg {
+			width: 100%;
+
+			rect {
+				transition: 1.5s;
+			}
 		}
 	}
 
@@ -162,7 +166,7 @@
 		margin-left: 16px;
 		
 		@include media('<=md') {
-			margin: 0;
+			margin-left: 8px;
 		}
 	}
 	

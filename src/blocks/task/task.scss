@@ -3,7 +3,7 @@
 	position: relative;
 	padding-top: 40px;
 
-	&::before {
+	/* &::before {
 		display: block;
 		content: '';
 		position: absolute;
@@ -13,7 +13,7 @@
 		background: url('#{$images-path}body-noise.gif') center / auto repeat transparent;
 		opacity: 4%;
 		top: 0;
-	}
+	} */
 
 	&__top {
 		position: relative;

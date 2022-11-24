@@ -59,6 +59,10 @@ body, html {
 	position: relative;
 }
 
+body {
+	background: url('#{$images-path}body-noise.png') center / auto repeat #131313;
+}
+
 .footer { 
 	flex: 0 0 auto; 
 	margin-top: auto; 

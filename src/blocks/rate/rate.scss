@@ -41,6 +41,7 @@
 
 	&__table {
 		border-collapse: collapse;
+		border-spacing: 0;
 		overflow: hidden;
 		width: 100%;
 		border-radius: 8px 8px 16px 16px;
@@ -79,10 +80,12 @@
 
 			tr {
 				background-color: #fff;
+				height: 56px;
 
 				@include media('<=md') {
 					display: block;
 					margin-bottom: 20px;
+					height: auto;
 				}
 	
 				&:last-child td {
@@ -99,12 +102,11 @@
 				vertical-align: middle;
 				position: relative;
 				font-size: 14px;
-				height: 56px;
-		
+				
 				@include media('<=md') {
 					display: block;
 					height: auto;
-					min-height: 80px;
+					padding: 25px 15px;
 					margin-bottom: -1px;
 					display: flex;
 					align-items: center;
@@ -123,6 +125,9 @@
 						background-color: rgba(0, 0, 0, 0.15);
 						color: #444;
 					}
+				}
+
+				@include media('<=xxxs') {
 				}
 
 				&:first-child {
@@ -159,7 +164,7 @@
 				}
 		
 				&#{$self}__green {
-					background-color: rgba(52, 255, 0, 0.08);
+					background-color: rgba(52, 255, 0, 0.09);
 				}
 			}
 
@@ -291,6 +296,7 @@
 				border-radius: 50%;
 				background: url('#{$images-path}icons-sprite.svg#icon-up-small-view-white') center / 12px 9px no-repeat #FE9E34;
 				transition: background-color 0.2s;
+				flex-shrink: 0;
 			}
 		}
 		

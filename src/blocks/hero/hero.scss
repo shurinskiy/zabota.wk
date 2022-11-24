@@ -1,9 +1,9 @@
 .hero {
 	$self: &;
 	position: relative;
-	background: url('#{$images-path}hero-bg-bot.jpg') center / cover no-repeat transparent;
+	background: linear-gradient(rgb(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('#{$images-path}hero-bg-bot.jpg') center / cover no-repeat;
 	padding: 100px 0 16px;
-
+	
 	&::before {
 		display: block;
 		content: '';
@@ -11,8 +11,7 @@
 		z-index: 1;
 		width: 100%;
 		height: 100%;
-		background: url('#{$images-path}body-noise.gif') center / auto repeat transparent;
-		opacity: 4%;
+		background: url('#{$images-path}body-noise.png') center / auto repeat transparent;
 		top: 0;
 	}
 
@@ -92,7 +91,7 @@
 		counter-reset: list_ctr;
 		display: flex;
 		align-items: flex-start;
-		gap: 16px;
+		// gap: 16px;
 		margin-bottom: 50px;
 
 		@include media('<=sm') {
@@ -154,19 +153,23 @@
 			}
 		}
 
+		&:not(:last-child) {
+			margin-right: 16px;
+		}
+
 		&:nth-child(2) {
 			margin-top: 12%;
 
 			@include media('<=sm') {
-				margin: 0;
+				margin-top: auto;
 			}
 		}
 		
 		&:nth-child(3) {
 			margin-top: 24%;
-
+			
 			@include media('<=sm') {
-				margin: 0;
+				margin-top: auto;
 			}
 		}
 
@@ -184,19 +187,21 @@
 			from {  transform: translateX(0%); }
 			to { transform: translateX(-200%); }
 		}
+	}
+
+	&__marquee-item {
+		width: 100%;
+		flex-shrink: 0;
 		
-		img {
-			width: 100%;
-			flex-shrink: 0;
-			
-			&:nth-child(1) {
-				animation: marquee1 20s linear infinite;
-				animation-delay: -10s;
-			}
-			
-			&:nth-child(2) {
-				animation: marquee2 20s linear infinite;
-			}
+		&:nth-child(1) {
+			animation: marquee1 20s linear infinite;
+			animation-delay: -10s;
 		}
+		
+		&:nth-child(2) {
+			animation: marquee2 20s linear infinite;
+		}
+
+		img { width: 100%; }
 	}
 }

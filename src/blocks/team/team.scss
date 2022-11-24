@@ -7,7 +7,7 @@
 		padding-top: 70px;
 	}
 
-	&::before {
+	/* &::before {
 		display: block;
 		content: '';
 		position: absolute;
@@ -17,7 +17,7 @@
 		background: url('#{$images-path}body-noise.gif') center / auto repeat transparent;
 		opacity: 4%;
 		top: 0;
-	}
+	} */
 
 	&__container {
 		position: relative;
@@ -33,6 +33,7 @@
 		color: #fff;
 		text-align: center;
 		position: sticky;
+		position: -webkit-sticky;
 		top: 50%;
 		transform: translateY(-50%);
 		margin-bottom: calc(3vw + 430px);
