@@ -1,8 +1,14 @@
 .task {
 	$self: &;
 	position: relative;
-	padding-top: 40px;
-
+	padding-top: 85px;
+	margin-top: -85px;
+	
+	@include media('<=sm') {
+		padding-top: 75px;
+		margin-top: -75px;
+	}
+	
 	/* &::before {
 		display: block;
 		content: '';
@@ -14,8 +20,9 @@
 		opacity: 4%;
 		top: 0;
 	} */
-
+	
 	&__top {
+		padding-top: 40px;
 		position: relative;
 		z-index: 2;
 	}
