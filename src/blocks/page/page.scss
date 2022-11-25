@@ -51,6 +51,9 @@
 
 		&_content.title {
 			color: #181818;
+		}
+		
+		&_center.title {
 			text-align: center;
 		}
 	}
@@ -116,7 +119,7 @@
 		}
 
 		&_gr {
-			max-width: 1400px;
+			// max-width: 1400px;
 		
 			@include media('<=md') {
 				grid-template-columns: 1fr;

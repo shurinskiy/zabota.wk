@@ -80,11 +80,17 @@
 			transition: opacity 0.2s;
 		}
 		
-		&:focus::placeholder {
-			opacity: 0;
+		&:focus {
+			background-color: #fff;
+			color: #131313;
+			
+			&::placeholder {
+				opacity: 0;
+			}
 		}
 		
-		&:focus, &:not(:placeholder-shown) {
+		// &:not(:placeholder-shown) {}
+		&:valid {
 			background-color: #fff;
 			color: #131313;
 		}
@@ -110,6 +116,7 @@
 			text-transform: uppercase;
 			text-align: center;
 			font-size: 14px;
+			height: 100%;
 			
 			option {
 				color: #000;
