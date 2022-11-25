@@ -1,9 +1,6 @@
 import gsap from "gsap";
-import Inputmask from "inputmask";
-import scrollLock from 'scroll-lock';
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { scrollToTop } from "../../js/libs/scroll";
-import { addUnderlay, makeModalFrame } from "../../js/libs/modal";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -39,21 +36,5 @@ gsap.registerPlugin(ScrollTrigger);
 	}
 
 	scrollToTop(document.querySelector('.footer__up'));
-
-	addUnderlay('modal');
-	makeModalFrame({ el: '.footer__call, .footer__ask-button', scrollLock }, function() {
-		Inputmask({ 
-			"mask": "+7 (999) 999-99-99", 
-			showMaskOnHover: false 
-		}).mask(this.querySelectorAll('input[type="tel"]'));
-		
-		this.querySelector('.resume__agree [type="checkbox"]').addEventListener('change', () => {
-			this.querySelector('[type="submit"]').toggleAttribute("disabled");
-		});
-
-		this.querySelectorAll('textarea.resume__input').forEach((area) => {
-			area.addEventListener('input', () => area.style.height = Math.max(area.scrollHeight, area.offsetHeight) + 'px');
-		});
-	});
 
 })();

@@ -30,9 +30,6 @@
 						<h3 class="block-v__title">бот Za|bota</h3>
 						<p class="block-v__note note">Создали бота, который звонит по резюме и находит заинтересованных разработчиков</p>
 					</div>
-					<div class="block-v__video" data-modal="#">
-						<video preload="auto" loop autoplay playsinline muted><source src="./images/stuff/video.mp4"  type="video/mp4"></video>
-					</div>
 				</div>
 				<div class="page__block block-c">
 					<h3 class="block-c__title subtitle">Поставленная задача:</h3>
@@ -46,6 +43,10 @@
 					<h3 class="block-a__title subtitle">Аудиозаписи ботов</h3>
 					<div class="block-a__track">
 						<button class="block-a__play" data-audio="images/stuff/case-hr-1.mp3"></button>
+						<div class="block-a__name">Аудио Запись бота</div>
+					</div>
+					<div class="block-a__track">
+						<button class="block-a__play" data-audio="images/stuff/case-hr-1-1.mp3"></button>
 						<div class="block-a__name">Аудио Запись бота</div>
 					</div>
 				</div>
@@ -69,15 +70,16 @@
 		<div class="resume">
 			<h2 class="resume__title title">Оставьте свой контакт!</h2>
 			<div class="resume__text">Мы свяжемся с Вами, обсудим детали вашей задачи и расскажем <br> обо всех интересующих вас вопросах</div>
-			<div class="resume__form">
+			<span class="resume__alert"></span>
+			<form class="resume__form" action="./">
 				<input class="resume__input" type="text" placeholder="Ваше имя" required>
 				<input class="resume__input" type="tel" placeholder="Телефон"required>
-				<button class="resume__field resume__field_double button button_orange" type="submit" data-modal="order-complete-3">Отправить</button>
+				<button class="resume__field resume__field_double button button_orange" type="submit">Отправить</button>
 				<label class="resume__agree">
 					<input type="checkbox" checked>
 					<p>*Вы соглашаетесь с условиями обработки <a href="./politics.html">персональных данных</a></p>
 				</label>
-			</div>
+			</form>
 		</div>
 	</div>
 
@@ -85,7 +87,8 @@
 		<div class="resume">
 			<h2 class="resume__title title">Оставьте ваш контакт, бот вам перезвонит прямо сейчас!</h2>
 			<div class="resume__text">Вы не устоите перед его обаянием! Он перезвонит вам по выбранному вами сценирию на указанный номер уже через 2 минуты.</div>
-			<div class="resume__form">
+			<span class="resume__alert"></span>
+			<form class="resume__form" action="./">
 				<input class="resume__field resume__input" type="text" placeholder="Ваше имя" required>
 				<input class="resume__field resume__input" type="tel" placeholder="Телефон" required>
 				<label class="resume__field resume__field_double resume__select">
@@ -107,12 +110,12 @@
 						<option value="14">Туризм</option>
 					</select>
 				</label>
-				<button class="resume__field resume__field_double button button_orange" type="submit" data-modal="order-complete-4">Отправить</button>
+				<button class="resume__field resume__field_double button button_orange" type="submit">Отправить</button>
 				<label class="resume__agree">
 					<input type="checkbox" checked>
 					<p>*Вы соглашаетесь с условиями обработки <a href="./politics.html">персональных данных</a></p>
 				</label>
-			</div>
+			</form>
 		</div>
 	</div>
 
@@ -120,16 +123,17 @@
 		<div class="resume">
 			<h2 class="resume__title title">Оставьте ваш контакт, бот вам перезвонит прямо сейчас!</h2>
 			<div class="resume__text">Вы не устоите перед его обаянием! Он перезвонит вам по выбранному вами сценирию на указанный номер уже через 2 минуты.</div>
-			<div class="resume__form">
+			<span class="resume__alert"></span>
+			<form class="resume__form" action="./">
 				<input class="resume__field resume__input" type="text" placeholder="Ваше имя" required>
 				<input class="resume__field resume__input" type="tel" placeholder="Телефон" required>
 				<textarea class="resume__field resume__field_double resume__input" rows="0" placeholder="Что вы хотели бы уточнить?" required></textarea>
-				<button class="resume__field resume__field_double button button_orange" type="submit" data-modal="order-complete-3">Отправить</button>
+				<button class="resume__field resume__field_double button button_orange" type="submit">Отправить</button>
 				<label class="resume__agree">
 					<input type="checkbox" checked>
 					<p>*Вы соглашаетесь с условиями обработки <a href="./politics.html">персональных данных</a></p>
 				</label>
-			</div>
+			</form>
 		</div>
 	</div>
 

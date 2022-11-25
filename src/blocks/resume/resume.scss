@@ -46,6 +46,15 @@
 			grid-template-columns: 1fr;
 		}
 	}
+	
+	&__alert {
+		display: block;
+		width: 100%;
+		max-width: 550px;
+		margin: 0 auto;
+		text-align: center;
+		color: #ff0000;
+	}
 
 	&__field {
 		grid-column: span 1;
