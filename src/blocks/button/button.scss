@@ -25,6 +25,15 @@
 		}
 	}
 	
+	&_grey {
+		background-color: #E0E0E0;
+		color: #181818;
+		
+		&:hover {
+			background-color: rgba(255, 136, 0, 0.8);
+		}
+	}
+	
 	&_orange {
 		background-color: rgba(255, 136, 0, 0.8);
 		

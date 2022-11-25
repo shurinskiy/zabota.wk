@@ -1,0 +1,184 @@
+<!DOCTYPE html> 
+<html lang="ru"> 
+<head> 
+	<meta charset="UTF-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+	<link rel="shortcut icon" href="images/favicon.ico"> 
+	<link rel="stylesheet" href="style.css"> 
+	<title></title> 
+</head> 
+<body class=""> 
+
+
+<section class="page">
+	<div class="page__container container">
+		<a class="page__back button button_light button_back" href="./">вернуться назад</a>
+		<h1 class="page__title title">Посмотрите, как мы успешно решаем задачи</h1>
+
+		<div class="page__steps step">
+	<div class="page__step step__item"><p><strong>Делается гибкая удобная структура,</strong> которую дальше легко менять и развивать</p></div>
+	<div class="page__step step__item"><p><strong>Использование правильной подстановки сотовых номеров на 30%</strong> увеличивает уровень дозвона по сравнению с городскими!</p></div>
+	<div class="page__step step__item"><p><strong>Все данные собираются в CRM и Google-таблицы,</strong> тем саммым можно легко получить аналитику и быстро управлять результатами</p></div>
+	<div class="page__step step__item"><p><strong>99,6% понимание ботами того,</strong> что скажут ваши клиенты после месяца поддержки</p></div>
+</div>
+
+		<div class="page__content">
+			<h2 class="page__title page__title_content page__title_center title">Ваша ниша - наша забота</h2>
+			<div class="page__layout">
+				<div class="page__block page__block_double block-v">
+					<div class="block-v__side">
+						<h3 class="block-v__title">UDG/УниЦентр - Предоставление помещений для бизнеса</h3>
+						<a class="block-v__button button button_light" href="https://ud-group.com/projects/realizovannye-proekty/unitsentr/"><span>Сайт компании ud-group.com</span></a>
+						<p class="block-v__note note">Создали голосового бота, который будет прозванивать арендосъемщиков и напоминать о предстоящей дате оплаты за аренду и выявлять арендаторов, у которых возникают сложности с оплатой аренды</p>
+					</div>
+				</div>
+				<div class="page__block block-c">
+					<h3 class="block-c__title subtitle">Поставленная задача:</h3>
+					<p class="block-c__text">Напоминание большому количеству арендаторов о наступлении сроков оплаты и просрочки.</p>
+				</div>
+				<div class="page__block block-c">
+					<h3 class="block-c__title subtitle">Результат</h3>
+					<p class="block-c__text">Полностью сократили расходы на контактный центр, центр, занимающийся сбором дебиторской задолженности</p>
+				</div>
+				<div class="page__block page__block_double block-a">
+					<h3 class="block-a__title subtitle">Аудиозаписи ботов</h3>
+					<div class="block-a__track">
+						<button class="block-a__play" data-audio="images/stuff/case-call-2.mp3"></button>
+						<div class="block-a__name">Аудио Запись бота</div>
+					</div>
+				</div>
+			</div>
+			<div class="page__resume resume">
+				<h2 class="resume__title title">Давайте поzаботимся о вашем бизнесе?</h2>
+				<div class="resume__form">
+					<a class="resume__field button button_light" href="./" data-modal="call-order-2">Протестировать бота</a>
+					<a class="resume__field button button_light" href="./faq.html">Остались вопросы</a>
+					<a class="resume__field resume__field_double button button_orange" href="./prices.html">Да, переходим к стоимости</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<audio id="audio" src="" controls></audio>
+
+<div class="modal__hidden">
+	<div id="call-order-1">
+		<div class="resume">
+			<h2 class="resume__title title">Оставьте свой контакт!</h2>
+			<div class="resume__text">Мы свяжемся с Вами, обсудим детали вашей задачи и расскажем <br> обо всех интересующих вас вопросах</div>
+			<div class="resume__form">
+				<input class="resume__input" type="text" placeholder="Ваше имя" required>
+				<input class="resume__input" type="tel" placeholder="Телефон"required>
+				<button class="resume__field resume__field_double button button_orange" type="submit" data-modal="order-complete-3">Отправить</button>
+				<label class="resume__agree">
+					<input type="checkbox" checked>
+					<p>*Вы соглашаетесь с условиями обработки <a href="./politics.html">персональных данных</a></p>
+				</label>
+			</div>
+		</div>
+	</div>
+
+	<div id="call-order-2">
+		<div class="resume">
+			<h2 class="resume__title title">Оставьте ваш контакт, бот вам перезвонит прямо сейчас!</h2>
+			<div class="resume__text">Вы не устоите перед его обаянием! Он перезвонит вам по выбранному вами сценирию на указанный номер уже через 2 минуты.</div>
+			<div class="resume__form">
+				<input class="resume__field resume__input" type="text" placeholder="Ваше имя" required>
+				<input class="resume__field resume__input" type="tel" placeholder="Телефон" required>
+				<label class="resume__field resume__field_double resume__select">
+					<select>
+						<option value="" disabled selected>Выбрать бота</option>
+						<option value="1">Прозвон входящих заявок (недозвоны или отсев некорректных лидов)</option>
+						<option value="2">Напомнить о мероприятии или пригласить на вебинар</option>
+						<option value="3">Напомнит о предстоящей оплате (например за аренду)</option>
+						<option value="4">Активация спящих клиентов (Рассказать об акции или событии)</option>
+						<option value="5">Провести голосовой опрос</option>
+						<option value="6">Пригласить на встречу</option>
+						<option value="7">Найти горячих клиентов из холодной базы</option>
+						<option value="8">Поиск сотрудников</option>
+						<option value="9">Найм сотрудников</option>
+						<option value="10">Проведение тестирования</option>
+						<option value="11">Транспорт и вождение</option>
+						<option value="12">Beauty - индустрия</option>
+						<option value="13">Государственный сектор</option>
+						<option value="14">Туризм</option>
+					</select>
+				</label>
+				<button class="resume__field resume__field_double button button_orange" type="submit" data-modal="order-complete-4">Отправить</button>
+				<label class="resume__agree">
+					<input type="checkbox" checked>
+					<p>*Вы соглашаетесь с условиями обработки <a href="./politics.html">персональных данных</a></p>
+				</label>
+			</div>
+		</div>
+	</div>
+
+	<div id="call-order-3">
+		<div class="resume">
+			<h2 class="resume__title title">Оставьте ваш контакт, бот вам перезвонит прямо сейчас!</h2>
+			<div class="resume__text">Вы не устоите перед его обаянием! Он перезвонит вам по выбранному вами сценирию на указанный номер уже через 2 минуты.</div>
+			<div class="resume__form">
+				<input class="resume__field resume__input" type="text" placeholder="Ваше имя" required>
+				<input class="resume__field resume__input" type="tel" placeholder="Телефон" required>
+				<textarea class="resume__field resume__field_double resume__input" rows="0" placeholder="Что вы хотели бы уточнить?" required></textarea>
+				<button class="resume__field resume__field_double button button_orange" type="submit" data-modal="order-complete-3">Отправить</button>
+				<label class="resume__agree">
+					<input type="checkbox" checked>
+					<p>*Вы соглашаетесь с условиями обработки <a href="./politics.html">персональных данных</a></p>
+				</label>
+			</div>
+		</div>
+	</div>
+
+	<div id="order-complete-1">
+		<div class="complete">
+			<h2 class="complete__title">Мы мигом!</h2>
+			<div class="complete__text">Скоро мы перезвоним Вам <br> и расскажем обо всех интересующих вас вопросах</div>
+			<div class="complete__note">Вы также можете написать нам в мессенджеры, если хотите рассказать больше подробностей вашей о задаче</div>
+			<div class="complete__socials">
+				<a class="complete__social complete__social_wapp" href="./"></a>
+				<a class="complete__social complete__social_tgm" href="./"></a>
+			</div>
+		</div>
+	</div>
+	
+	<div id="order-complete-2">
+		<div class="complete">
+			<h2 class="complete__title">Мы мигом!</h2>
+			<div class="complete__text">Вы также можете задать нам свои вопросы в мессенджеры <br> самостоятельно</div>
+			<div class="complete__socials">
+				<a class="complete__social complete__social_wapp" href="./"></a>
+				<a class="complete__social complete__social_tgm" href="./"></a>
+			</div>
+		</div>
+	</div>
+	
+	<div id="order-complete-3">
+		<div class="complete complete_success">
+			<h2 class="complete__title">Заявка <br> отправлена!</h2>
+			<div class="complete__text">Ожидайте звонка от бота через 2 минуты.</div>
+			<div class="complete__note">Пока ожидаете, можете задать нам интересующие вопросы <br> в мессенджерах.</div>
+			<div class="complete__socials">
+				<a class="complete__social complete__social_wapp" href="./"></a>
+				<a class="complete__social complete__social_tgm" href="./"></a>
+			</div>
+		</div>
+	</div>
+	
+	<div id="order-complete-4">
+		<div class="complete">
+			<h2 class="complete__title">Вы готовы <br> к сотрудничеству?</h2>
+			<div class="complete__buttons">
+				<a class="complete__button button button_dark" href="./">Остались вопросы</a>
+				<a class="complete__button button button_dark" href="./">Посмотреть сайт дальше</a>
+				<a class="complete__button complete__button_double button button_orange" href="./">Мне нравится, можем обсуждать</a>
+			</div>
+		</div>
+	</div>
+</div> 
+
+<script type="text/javascript" charset="utf-8" src="jquery.min.js"></script>
+<script src="common.js"></script> 
+</body> 
+</html>

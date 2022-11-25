@@ -41,7 +41,7 @@ gsap.registerPlugin(ScrollTrigger);
 	scrollToTop(document.querySelector('.footer__up'));
 
 	addUnderlay('modal');
-	makeModalFrame({ el: '.footer__call', scrollLock }, function() {
+	makeModalFrame({ el: '.footer__call, .footer__ask-button', scrollLock }, function() {
 		Inputmask({ 
 			"mask": "+7 (999) 999-99-99", 
 			showMaskOnHover: false 

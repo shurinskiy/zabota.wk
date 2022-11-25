@@ -4,16 +4,13 @@
 	<div class="page__container container">
 		<a class="page__back button button_light button_back" href="./">вернуться назад</a>
 		<h1 class="page__title title">Посмотрите, как мы успешно решаем задачи</h1>
-		<div class="page__steps step">
-			<div class="page__step step__item"><p><strong>Делается гибкая удобная структура,</strong> которую дальше легко менять и развивать</p></div>
-			<div class="page__step step__item"><p><strong>Использование правильной подстановки сотовых номеров на 30%</strong> увеличивает уровень дозвона по сравнению с городскими!</p></div>
-			<div class="page__step step__item"><p><strong>Все данные собираются в CRM и Google-таблицы,</strong> тем саммым можно легко получить аналитику и быстро управлять результатами</p></div>
-			<div class="page__step step__item"><p><strong>99,6% понимание ботами того,</strong> что скажут ваши клиенты после месяца поддержки</p></div>
-		</div>
+
+		@@include("_case-steps.html")
+
 		<div class="page__content">
 			<h2 class="page__title page__title_content page__title_center title">Ваша ниша - наша забота</h2>
-			<div class="page__layout page__layout_p1">
-				<div class="page__block block-v">
+			<div class="page__layout">
+				<div class="page__block page__block_double  block-v">
 					<div class="block-v__side">
 						<h3 class="block-v__title">ООО Виномаркет «Точка» — Сеть винотек в Крыму (розничная продажа алкоголя)</h3>
 						<a class="block-v__button button button_light" href="./"><span>Сайт компании tochkashop.ru</span></a>
@@ -39,7 +36,7 @@
 					<h3 class="block-c__title subtitle">Cтоимость</h3>
 					<p class="block-c__text">300 руб. за лида</p>
 				</div>
-				<div class="page__block block-a">
+				<div class="page__block page__block_double block-a">
 					<h3 class="block-a__title subtitle">Аудиозаписи ботов</h3>
 					<div class="block-a__track">
 						<button class="block-a__play" data-audio="images/stuff/audio.mp3"></button>
@@ -50,14 +47,13 @@
 			<div class="page__resume resume">
 				<h2 class="resume__title title">Давайте поzаботимся о вашем бизнесе?</h2>
 				<div class="resume__form">
-					<a class="resume__field button button_light" href="./">Протестировать бота</a>
-					<a class="resume__field button button_light" href="./">Остались вопросы</a>
-					<a class="resume__field resume__field_double button button_orange" href="./">Да, переходим к стоимости</a>
+					<a class="resume__field button button_light" href="./" data-modal="call-order-2">Протестировать бота</a>
+					<a class="resume__field button button_light" href="./faq.html">Остались вопросы</a>
+					<a class="resume__field resume__field_double button button_orange" href="./prices.html">Да, переходим к стоимости</a>
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
-
 
 @@include("_bottom.html")
