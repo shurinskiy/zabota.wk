@@ -13,3 +13,4 @@ import "../blocks/tab/tab.js";
 import "../blocks/rate/rate.js";
 import "../blocks/resume/resume.js";
 import "../blocks/sticky-w/sticky-w.js";
+import "../blocks/connect/connect.js";

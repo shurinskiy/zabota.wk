@@ -5,7 +5,7 @@ import { addUnderlay, makeModalFrame } from "../../js/libs/modal";
 (() => {
 		
 	addUnderlay('modal');
-	makeModalFrame({ el: '.resume__field, .footer__call, .footer__ask-button, .header__button', scrollLock }, function(el) {
+	makeModalFrame({ el: '.resume__field, .footer__call, .footer__ask-button, .header__button, .complete__button', scrollLock }, function(el) {
 		const id = document.location.pathname.split('/').at(-1).split('.')[0];
 		const agree = this.querySelector('.resume__agree [type="checkbox"]');
 		const submit = this.querySelector('[type="submit"]');
@@ -33,7 +33,7 @@ import { addUnderlay, makeModalFrame } from "../../js/libs/modal";
 				if ([...required].every(field => field.value)) {
 					alert.replaceChildren();
 					alert.appendChild(loader);
-					
+			
 					$.ajax({
 						type: 'post',
 						dataType: 'json',
@@ -44,7 +44,12 @@ import { addUnderlay, makeModalFrame } from "../../js/libs/modal";
 						alert.replaceChildren();
 						
 						if(response.success) {
-							makeModalFrame.call(form, { scrollLock });
+							makeModalFrame.call(form, { scrollLock }, function(el) {
+								if (form.dataset.modal == 'order-complete-3') {
+									setTimeout(() => { window.location.assign('/connect.html') }, 20 * 1000);
+								}
+							});
+
 						} else {
 							alert.innerText = response.data.text;
 						}
