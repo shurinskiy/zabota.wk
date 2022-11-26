@@ -85,10 +85,10 @@ export const makeModalFrame = function(options = {}, cb) {
 				scrollLock.clearQueueScrollLocks();
 				scrollLock.enablePageScroll();
 			}
-
+			
 			modal.className = `${cls}`;
 			modal.style.display = "none";
-
+			
 			body.className = `${cls}__content`;
 			body.innerHTML = '';
 		}

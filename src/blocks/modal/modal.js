@@ -6,9 +6,12 @@ import { addUnderlay, makeModalFrame } from "../../js/libs/modal";
 		
 	addUnderlay('modal');
 	makeModalFrame({ el: '.resume__field, .footer__call, .footer__ask-button, .header__button', scrollLock }, function(el) {
+		const id = document.location.pathname.split('/').at(-1).split('.')[0];
 		const agree = this.querySelector('.resume__agree [type="checkbox"]');
 		const submit = this.querySelector('[type="submit"]');
+		const required = this.querySelectorAll('[required]');
 		const alert = this.querySelector('.resume__alert');
+		const form = this.querySelector('form');
 
 		Inputmask({ 
 			"mask": "+7 (999) 999-99-99", 
@@ -21,44 +24,33 @@ import { addUnderlay, makeModalFrame } from "../../js/libs/modal";
 		});
 		
 		if (submit && agree && alert) {
-			let id = document.location.pathname.split('/').at(-1).split('.')[0];
-			let formdata = $(this).find('form').serialize() + `&id=${id}`;
-			let required = $(this).find('[required]');
-
 			
 			submit.addEventListener('click', (e) => {
 				e.preventDefault();
 				
 				if ([...required].every(field => field.value)) {
+					alert.innerText = '';
 					
-					/* $.ajax({
+					makeModalFrame.call(form, { scrollLock });
+					
+					$.ajax({
 						type: 'post',
 						dataType: 'json',
 						url: 'send.php',
-						data: formdata,
+						data: $(form).serialize() + `&id=${id}`,
 						cache: false,
-					}).done(function(response) {
+					}).done((response) => {
 						
 						if(response.success) {
-							$forminputs.val('');
-							$infoblock.addClass('form__alert_success').html(response.data.text);
-							
-							setTimeout(() => {
-								$form
-								.parents('.modal__body')
-								.find('.modal__close')
-								.trigger('click');
-							}, 3000);
-							
+							makeModalFrame.call(form, { scrollLock });
 						} else {
-							$infoblock.html(response.data.text);
-		
-							if(response.data.smtpinfo !== undefined && response.data.smtpinfo !== '')
-							console.log(response.data.smtpinfo);
+							alert.innerText = response.data.text;
 						}
-						
-						$elements.prop("disabled", false);
-					}); */
+
+					});
+
+				} else {
+					alert.innerText = 'Пожалуйста, заполните все поля';
 				}
 			});
 
