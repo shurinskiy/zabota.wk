@@ -13,6 +13,8 @@
 			.removeClass('active')
 			.filter(`.${this.id}`)
 			.addClass('active');
+
+		$('.resume__field[data-rate]').attr('data-rate', this.id);
 	});
 
 })();

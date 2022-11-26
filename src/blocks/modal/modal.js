@@ -8,10 +8,12 @@ import { addUnderlay, makeModalFrame } from "../../js/libs/modal";
 	makeModalFrame({ el: '.resume__field, .footer__call, .footer__ask-button, .header__button, .complete__button', scrollLock }, function(el) {
 		const id = document.location.pathname.split('/').at(-1).split('.')[0];
 		const agree = this.querySelector('.resume__agree [type="checkbox"]');
-		const submit = this.querySelector('[type="submit"]');
 		const required = this.querySelectorAll('[required]');
+		const submit = this.querySelector('[type="submit"]');
 		const alert = this.querySelector('.resume__alert');
 		const form = this.querySelector('form');
+		const rate = el.dataset.rate || '';
+
 		const loader = document.createElement("img");
 		loader.src = 'images/loader.svg';
 
@@ -19,7 +21,6 @@ import { addUnderlay, makeModalFrame } from "../../js/libs/modal";
 			"mask": "+7 (999) 999-99-99", 
 			showMaskOnHover: false 
 		}).mask(this.querySelectorAll('input[type="tel"]'));
-		
 		
 		this.querySelectorAll('textarea.resume__input').forEach((area) => {
 			area.addEventListener('input', () => area.style.height = Math.max(area.scrollHeight, area.offsetHeight) + 'px');
@@ -38,7 +39,7 @@ import { addUnderlay, makeModalFrame } from "../../js/libs/modal";
 						type: 'post',
 						dataType: 'json',
 						url: 'send.php',
-						data: $(form).serialize() + `&id=${id}`,
+						data: $(form).serialize() + `&id=${id}` + `&rate=${rate}`,
 						cache: false,
 					}).done((response) => {
 						alert.replaceChildren();
