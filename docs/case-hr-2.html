@@ -53,7 +53,7 @@
 				<div class="resume__form">
 					<a class="resume__field button button_light" href="./" data-modal="call-order-2">Протестировать бота</a>
 					<a class="resume__field button button_light" href="./faq.html">Остались вопросы</a>
-					<a class="resume__field resume__field_double button button_orange" href="./prices.html">Да, переходим к стоимости</a>
+					<a class="resume__field resume__field_double button button_orange" href="./" data-modal="call-order-4">Да, переходим к стоимости</a>
 				</div>
 			</div>
 		</div>
@@ -89,7 +89,7 @@
 				<input class="resume__field resume__input" type="text" placeholder="Ваше имя" required>
 				<input class="resume__field resume__input" type="tel" placeholder="Телефон" required>
 				<label class="resume__field resume__field_double resume__select">
-					<select>
+					<select required>
 						<option value="" disabled selected>Выбрать бота</option>
 						<option value="1">Прозвон входящих заявок (недозвоны или отсев некорректных лидов)</option>
 						<option value="2">Напомнить о мероприятии или пригласить на вебинар</option>
@@ -125,6 +125,23 @@
 				<input class="resume__field resume__input" type="text" placeholder="Ваше имя" required>
 				<input class="resume__field resume__input" type="tel" placeholder="Телефон" required>
 				<textarea class="resume__field resume__field_double resume__input" rows="0" placeholder="Что вы хотели бы уточнить?" required></textarea>
+				<button class="resume__field resume__field_double button button_orange" type="submit">Отправить</button>
+				<label class="resume__agree">
+					<input type="checkbox" checked>
+					<p>*Вы соглашаетесь с условиями обработки <a href="./politics.html">персональных данных</a></p>
+				</label>
+			</form>
+		</div>
+	</div>
+
+	<div id="call-order-4">
+		<div class="resume">
+			<h2 class="resume__title title">Оставьте свой контакт!</h2>
+			<div class="resume__text">Мы свяжемся с Вами, расскажем о том, из чего складывается цена и <br> рассчитаем для Вас стоимость исходя из вашей задачи</div>
+			<span class="resume__alert"></span>
+			<form class="resume__form" action="./">
+				<input class="resume__input" type="text" placeholder="Ваше имя" required>
+				<input class="resume__input" type="tel" placeholder="Телефон"required>
 				<button class="resume__field resume__field_double button button_orange" type="submit">Отправить</button>
 				<label class="resume__agree">
 					<input type="checkbox" checked>
