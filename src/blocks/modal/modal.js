@@ -12,6 +12,8 @@ import { addUnderlay, makeModalFrame } from "../../js/libs/modal";
 		const required = this.querySelectorAll('[required]');
 		const alert = this.querySelector('.resume__alert');
 		const form = this.querySelector('form');
+		const loader = document.createElement("img");
+		loader.src = 'images/loader.svg';
 
 		Inputmask({ 
 			"mask": "+7 (999) 999-99-99", 
@@ -29,7 +31,8 @@ import { addUnderlay, makeModalFrame } from "../../js/libs/modal";
 				e.preventDefault();
 				
 				if ([...required].every(field => field.value)) {
-					alert.innerText = '';
+					alert.replaceChildren();
+					alert.appendChild(loader);
 					
 					$.ajax({
 						type: 'post',
@@ -38,6 +41,7 @@ import { addUnderlay, makeModalFrame } from "../../js/libs/modal";
 						data: $(form).serialize() + `&id=${id}`,
 						cache: false,
 					}).done((response) => {
+						alert.replaceChildren();
 						
 						if(response.success) {
 							makeModalFrame.call(form, { scrollLock });
