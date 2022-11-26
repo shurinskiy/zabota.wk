@@ -70,10 +70,10 @@ makeModalFrame({ el: '.some-el', cls: 'modal', scrollLock}, function() {
 });
 */
 
-export const makeModalFrame = function(options = {}, cb) {
-	const { scrollLock } = options;
-	const cls = options.cls || 'modal';
-	const select = options.el || `[data-${cls}]`;
+export const makeModalFrame = function(props = {}) {
+	const { scrollLock } = props;
+	const cls = props.cls || 'modal';
+	const select = props.el || `[data-${cls}]`;
 
 	const modal = document.querySelector(`#${cls}__underlay`);
 	const body = modal.querySelector(`.${cls}__content`);
@@ -91,6 +91,9 @@ export const makeModalFrame = function(options = {}, cb) {
 			
 			body.className = `${cls}__content`;
 			body.innerHTML = '';
+
+			if (typeof props.close === 'function') 
+				return props.close.call(body);
 		}
 		
 		const open = function(el) {
@@ -108,8 +111,8 @@ export const makeModalFrame = function(options = {}, cb) {
 			if(typeof scrollLock !== 'undefined')
 				scrollLock.disablePageScroll();
 
-			if (typeof cb === 'function') 
-				return cb.call(body, el);
+			if (typeof props.open === 'function') 
+				return props.open.call(body, el);
 		}
 
 		if(this) {

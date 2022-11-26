@@ -9,7 +9,12 @@ import { addUnderlay, makeModalFrame } from "../../js/libs/modal";
 
 		setTimeout(() => {
 			connect.replaceChildren();
-			makeModalFrame.call(connect, { scrollLock });
+			makeModalFrame.call(connect, {
+				scrollLock,
+				close: function() {
+					window.location.assign('/')
+				}
+			});
 		}, 60 * 1000);
 	}
 
