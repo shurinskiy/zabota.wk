@@ -31,8 +31,6 @@ import { addUnderlay, makeModalFrame } from "../../js/libs/modal";
 				if ([...required].every(field => field.value)) {
 					alert.innerText = '';
 					
-					makeModalFrame.call(form, { scrollLock });
-					
 					$.ajax({
 						type: 'post',
 						dataType: 'json',
@@ -53,7 +51,6 @@ import { addUnderlay, makeModalFrame } from "../../js/libs/modal";
 					alert.innerText = 'Пожалуйста, заполните все поля';
 				}
 			});
-
 
 			agree.addEventListener('change', () => submit.toggleAttribute("disabled"));
 		}
