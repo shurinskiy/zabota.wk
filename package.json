@@ -56,10 +56,12 @@
 		"gsap": "^3.11.3",
 		"inputmask": "^5.0.6",
 		"jquery": "^3.6.0",
+		"pace-js": "^1.2.4",
 		"scroll-lock": "^2.1.5"
 	},
 	"externalJs": {
-		"jquery": "dist/jquery.min.js"
+		"jquery": "dist/jquery.min.js",
+		"pace-js": "pace.min.js"
 	},
 	"ftp": {
 		"host": "",

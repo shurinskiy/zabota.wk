@@ -8,6 +8,7 @@ import { addUnderlay, makeModalFrame } from "../../js/libs/modal";
 	makeModalFrame({ 
 		el: '.resume__field, .footer__call, .footer__ask-button, .header__button, .complete__button', 
 		scrollLock,
+		/* Коллбэк на открытие модального окошка */
 		open: function(el) {
 			const id = document.location.pathname.split('/').at(-1).split('.')[0];
 			const agree = this.querySelector('.resume__agree [type="checkbox"]');
@@ -20,11 +21,13 @@ import { addUnderlay, makeModalFrame } from "../../js/libs/modal";
 			const loader = document.createElement("img");
 			loader.src = 'images/loader.svg';
 	
+			/* Маска на ввод телефонного номера */
 			Inputmask({ 
 				"mask": "+7 (999) 999-99-99", 
 				showMaskOnHover: false 
 			}).mask(this.querySelectorAll('input[type="tel"]'));
 			
+			/* Увеличивать высоту textarea по мере ввода текста */
 			this.querySelectorAll('textarea.resume__input').forEach((area) => {
 				area.addEventListener('input', () => area.style.height = Math.max(area.scrollHeight, area.offsetHeight) + 'px');
 			});
@@ -48,8 +51,10 @@ import { addUnderlay, makeModalFrame } from "../../js/libs/modal";
 							alert.replaceChildren();
 							
 							if(response.success) {
+								/* Еще одна модалка с адресом из data-modal формы */
 								makeModalFrame.call(form, {
 									scrollLock,
+									/* Коллбэк на открытие модального окошка */
 									open: function(el) {
 										if (form.dataset.modal == 'order-complete-3') {
 											setTimeout(() => { window.location.assign('/connect.html') }, 20 * 1000);
@@ -58,6 +63,7 @@ import { addUnderlay, makeModalFrame } from "../../js/libs/modal";
 								});
 	
 							} else {
+								/* Если сервер захочет передать текстовый ответ */
 								alert.innerText = response.data.text;
 							}
 	

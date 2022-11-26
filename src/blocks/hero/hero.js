@@ -47,19 +47,5 @@ gsap.registerPlugin(ScrollTrigger);
 			});
 		});
 	}
-
-
-	// Предварительная загрузка странички
-
-	/* let p = Promise.resolve();
 	
-	for (let count = 1; count <= 100; count ++) {
-		p = p.then(() => new Promise(resolve => {
-			$("#load-perc")
-				.text(count + "%")
-				.delay(200)
-				.fadeIn("slow", resolve);
-		}));
-	} */
-
 })();
