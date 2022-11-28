@@ -57,14 +57,14 @@ import { addUnderlay, makeModalFrame } from "../../js/libs/modal";
 									/* Коллбэк на открытие модального окошка */
 									open: function(el) {
 										if (form.dataset.modal == 'order-complete-3') {
-											setTimeout(() => { window.location.assign('/connect.html') }, 20 * 1000);
+											setTimeout(() => { window.location.assign('./connect.html') }, 20 * 1000);
 										}
 									}
 								});
 	
 							} else {
 								/* Если сервер захочет передать текстовый ответ */
-								alert.innerText = response.data.text;
+								alert.innerText = response.data?.text;
 							}
 	
 						});

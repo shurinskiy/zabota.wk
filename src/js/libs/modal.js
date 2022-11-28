@@ -62,11 +62,19 @@ import { addUnderlay, makeModalFrame } from "../../js/lib";
 import scrollLock from 'scroll-lock';
 import Inputmask from "inputmask";
 addUnderlay('modal');
-makeModalFrame({ el: '.some-el', cls: 'modal', scrollLock}, function() {
-	Inputmask({ 
-		"mask": "+7 (999) 999-99-99", 
-		showMaskOnHover: false 
-	}).mask(this.querySelectorAll('input[type="tel"]'));
+makeModalFrame({ 
+	el: '.some-el', 
+	cls: 'modal', 
+	scrollLock,
+	open: function() {
+		Inputmask({ 
+			"mask": "+7 (999) 999-99-99", 
+			showMaskOnHover: false 
+		}).mask(this.querySelectorAll('input[type="tel"]'));
+	},
+	close: function() {
+		// some code on close modal
+	}
 });
 */
 

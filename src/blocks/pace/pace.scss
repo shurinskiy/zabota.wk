@@ -42,7 +42,7 @@
 		background: url('#{$images-path}loader-heart.png') center / contain no-repeat transparent;
 		position: absolute;
 		right: 0;
-		bottom: 0;
+		bottom: 20px;
 		animation: animateHeart 1.5s linear infinite;
 		
 		@include media('<=lg') {
