@@ -12,7 +12,7 @@ import { addUnderlay, makeModalFrame } from "../../js/libs/modal";
 			makeModalFrame.call(connect, {
 				scrollLock,
 				close: function() {
-					window.location.assign('/')
+					window.location.assign('./')
 				}
 			});
 		}, 60 * 1000);
