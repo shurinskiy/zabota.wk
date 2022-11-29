@@ -17,6 +17,9 @@ import { addUnderlay, makeModalFrame } from "../../js/libs/modal";
 			const alert = this.querySelector('.resume__alert');
 			const form = this.querySelector('form');
 			const rate = el.dataset.rate || '';
+			const modal_id = this.closest('.modal').className.split(' ').at(-1);
+
+			console.log(modal_id);
 	
 			const loader = document.createElement("img");
 			loader.src = 'images/loader.svg';
@@ -45,7 +48,7 @@ import { addUnderlay, makeModalFrame } from "../../js/libs/modal";
 							type: 'post',
 							dataType: 'json',
 							url: 'send.php',
-							data: $(form).serialize() + `&id=${id}` + `&rate=${rate}`,
+							data: $(form).serialize() + `&id=${id}` + `&rate=${rate}` + `&modal=${modal_id}`,
 							cache: false,
 						}).done((response) => {
 							alert.replaceChildren();
