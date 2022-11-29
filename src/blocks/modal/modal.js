@@ -50,7 +50,7 @@ import { addUnderlay, makeModalFrame } from "../../js/libs/modal";
 						}).done((response) => {
 							alert.replaceChildren();
 							
-							if(response.success) {
+							if(response?.success) {
 								/* Еще одна модалка с адресом из data-modal формы */
 								makeModalFrame.call(form, {
 									scrollLock,
@@ -64,7 +64,7 @@ import { addUnderlay, makeModalFrame } from "../../js/libs/modal";
 	
 							} else {
 								/* Если сервер захочет передать текстовый ответ */
-								alert.innerText = response.data?.text;
+								alert.innerText = response?.data?.text;
 							}
 	
 						});

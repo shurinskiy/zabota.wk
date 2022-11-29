@@ -2,10 +2,11 @@ import gsap from "gsap";
 
 (() => {
 
-	const ball = document.querySelector(".cursor");
+	const ball = document.querySelector('.cursor');
 
 	if (ball) {
 		
+		const task = document.querySelector('.task__content');
 		const pos = { x: window.innerWidth / 2, y: window.innerHeight / 2};
 		const mouse = { x: pos.x, y: pos.y };
 		const speed = 0.2;
@@ -33,5 +34,8 @@ import gsap from "gsap";
 			xSet(pos.x);
 			ySet(pos.y);
 		});
+
+		task.addEventListener('mouseenter', (e) => ball.classList.add('hidden'));
+		task.addEventListener('mouseleave', (e) => ball.classList.remove('hidden'));
 	}
 })();
