@@ -17,7 +17,7 @@ import { addUnderlay, makeModalFrame } from "../../js/libs/modal";
 			const alert = this.querySelector('.resume__alert');
 			const form = this.querySelector('form');
 			const rate = el.dataset.rate || '';
-			const modal_id = this.closest('.modal').className.split(' ').at(-1);
+			const modal_id = [...this.closest('.modal')?.classList].at(-1);
 
 			console.log(modal_id);
 	
