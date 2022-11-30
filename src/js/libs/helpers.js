@@ -7,6 +7,9 @@ export const isObject = (item) => {
 	return (item && typeof item === 'object' && !Array.isArray(item));
 }
 
+// Взять последний элемент массива
+export const arrLast = (arr = []) => arr[arr.length - 1];
+
 
 //Слияние двух объектов с глубокой вложенностью
 export const mergeDeep = (target, ...sources) => {

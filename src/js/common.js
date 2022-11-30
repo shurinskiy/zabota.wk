@@ -1,6 +1,22 @@
 import "./blocks.js";
 
 /* Polyfills */
+
+
+(function() {
+	Document.prototype.replaceChildren ||= replaceChildren;
+	DocumentFragment.prototype.replaceChildren ||= replaceChildren;
+	Element.prototype.replaceChildren ||= replaceChildren;
+
+	function replaceChildren(...new_children) {
+		const { childNodes } = this;
+		while (childNodes.length) {
+			childNodes[0].remove();
+		}
+		this.append(...new_children);
+	}
+})();
+
 (function(e) {
 	e.matches = e.matches || e.mozMatchesSelector || e.msMatchesSelector || e.oMatchesSelector || e.webkitMatchesSelector;
 	e.closest = e.closest || function closest(selector) {
@@ -12,7 +28,7 @@ import "./blocks.js";
 }(Element.prototype));
 
 (function(e) {
-	var matches = e.matches || e.matchesSelector || e.webkitMatchesSelector || e.mozMatchesSelector || e.msMatchesSelector || e.oMatchesSelector;
+	let matches = e.matches || e.matchesSelector || e.webkitMatchesSelector || e.mozMatchesSelector || e.msMatchesSelector || e.oMatchesSelector;
 	!matches ? (e.matches = e.matchesSelector = function matches(selector) {
 		let matches = document.querySelectorAll(selector);
 		let th = this;

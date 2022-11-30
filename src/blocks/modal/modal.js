@@ -1,6 +1,7 @@
 import Inputmask from "inputmask";
 import scrollLock from 'scroll-lock';
 import { addUnderlay, makeModalFrame } from "../../js/libs/modal";
+import { arrLast } from "../../js/libs/helpers";
 
 (() => {
 
@@ -23,9 +24,6 @@ import { addUnderlay, makeModalFrame } from "../../js/libs/modal";
 		scrollLock,
 		/* Коллбэк на открытие модального окошка */
 		open: function(el) {
-			const id = document.location.pathname.split('/').at(-1).split('.')[0];
-			const modal_id = [...this.closest('.modal')?.classList].at(-1);
-
 			const agree = this.querySelector('.resume__agree [type="checkbox"]');
 			const required = this.querySelectorAll('[type="tel"], [type="text"], textarea');
 			const submit = this.querySelector('[type="submit"]');
@@ -36,6 +34,9 @@ import { addUnderlay, makeModalFrame } from "../../js/libs/modal";
 			const loader = document.createElement("img");
 			loader.src = './images/loader.svg';
 			
+			const id = arrLast(document.location.pathname.split('/')).split('.')[0];
+			const modal_id = arrLast([...this.closest('.modal')?.classList]);
+
 			/* Маска на ввод телефонного номера */
 			Inputmask({ 
 				"mask": "+7 (999) 999-99-99", 
