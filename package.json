@@ -56,6 +56,7 @@
 		"gsap": "^3.11.3",
 		"inputmask": "^5.0.6",
 		"jquery": "^3.6.0",
+		"js-cookie": "^3.0.1",
 		"pace-js": "^1.2.4",
 		"scroll-lock": "^2.1.5"
 	},
@@ -73,6 +74,6 @@
 		"from": "src/**/*.html",
 		"to": "src/blocks",
 		"js": "src/js/blocks.js",
-		"omit": "@@,js-,active,opened"
+		"omit": "@@,js-,active,opened,title,rate,unacquired"
 	}
 }

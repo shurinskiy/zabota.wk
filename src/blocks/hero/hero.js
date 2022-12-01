@@ -1,3 +1,4 @@
+import Cookies from 'js-cookie'
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
@@ -46,6 +47,10 @@ gsap.registerPlugin(ScrollTrigger);
 				y: 100,
 			});
 		});
+	}
+
+	if (Cookies.get('ordered')) {
+		document.querySelectorAll('.unordered').forEach(section => section.classList.remove('unordered'));
 	}
 	
 })();

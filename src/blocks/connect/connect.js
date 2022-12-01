@@ -1,3 +1,4 @@
+import Cookies from 'js-cookie'
 import scrollLock from 'scroll-lock';
 import { addUnderlay, makeModalFrame } from "../../js/libs/modal";
 
@@ -8,6 +9,7 @@ import { addUnderlay, makeModalFrame } from "../../js/libs/modal";
 		addUnderlay('modal');
 
 		setTimeout(() => {
+			Cookies.set('ordered', true, { expires: 365 });
 			connect.replaceChildren();
 			makeModalFrame.call(connect, {
 				scrollLock,
