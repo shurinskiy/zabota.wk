@@ -7,17 +7,16 @@ import { arrLast } from "../../js/libs/helpers";
 
 	/* Проверка полей на пустое значение. В случае type="tel", нужно хотя бы одно заполненное поле */
 	const fieldsValidation = ([...fields]) => {
-		return fields.reduce((flag, field) => {
+		return fields.every((field) => {
 			if (field.type == 'text' || field.tagName == 'TEXTAREA') {
-				flag = !!field.value;
+				return !!field.value;
 			} else if(field.type == 'tel') {
-				flag = fields.some(field => (field.type == 'tel') && !!field.value);
+				return fields.some(field => (field.type == 'tel') && !!field.value);
 			}
-			
-			return flag;
-		}, false);
+		});
 	}
 
+	
 	addUnderlay('modal');
 	makeModalFrame({ 
 		el: '.resume__field, .footer__call, .footer__ask-button, .header__button, .complete__button', 
