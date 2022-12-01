@@ -318,7 +318,28 @@
 		transition: background-color 0.2s;
 		
 		@include media('<=md') {
-			margin: 8px 0 0;
+			margin: 8px auto 0;
+		}
+		
+		&_top {
+			
+			@include media('<=md') {
+				display: block;
+				margin: 5px auto;
+			}
+		
+			#{$self}__hint-content {
+				transform: translateY(-10%);
+			
+				@include media('<=md') {
+					left: 50%;
+					transform: translate(-50%, -50%);
+				}
+				
+				@include media('<=xxs') {
+					padding: 15px 20px 5px;
+				}
+			}
 		}
 		
 		&:hover {
@@ -334,6 +355,9 @@
 	&__hint-content {
 		display: none;
 		box-sizing: border-box;
+		font-family: "PL", sans-serif;
+		font-size: 14px;
+		text-align: left;
 		position: absolute;
 		top: 50%;
 		left: 15px;

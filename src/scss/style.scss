@@ -70,7 +70,7 @@ body {
 
 
 p { margin-bottom: 10px; }
-strong { font-weight: bold; }
+strong { font-family: "PLB", sans-serif; }
 em { font-style: italic; }
 a { color: #fff; text-decoration: none; }
 #audio { @include hide(); }
