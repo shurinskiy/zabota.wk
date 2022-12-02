@@ -81,7 +81,6 @@ import { arrLast } from "../../js/libs/helpers";
 								// Если сервер захочет передать текстовый ответ
 								alert.innerText = response?.data?.text;
 							}
-	
 						});
 	
 					} else {

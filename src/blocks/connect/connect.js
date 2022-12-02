@@ -9,7 +9,7 @@ import { addUnderlay, makeModalFrame } from "../../js/libs/modal";
 		addUnderlay('modal');
 
 		setTimeout(() => {
-			Cookies.set('ordered', true, { expires: 365 });
+			Cookies.set('ordered', true, { expires: 3 });
 			connect.replaceChildren();
 			makeModalFrame.call(connect, {
 				scrollLock,
