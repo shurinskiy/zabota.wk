@@ -24,7 +24,7 @@ import { slideUp, slideDown, slideToggle } from "./helpers";
 *
 * @вызов (с уточнением контекста):
 *
-import { smoothAccordion } from "../../js/lib";
+import { smoothAccordion } from "../../js/libs/accordions";
 document.querySelectorAll('.accordeon').forEach((accordeon) => {
 	smoothAccordion(accordeon.querySelectorAll('.accordeon__head'), { 
 		events: 'click, mouseenter',
@@ -95,7 +95,7 @@ export const smoothAccordion = function(items, options = {}) {
 *
 * @вызов (с уточнением контекста):
 *
-import { roughAccordion } from "../../js/lib";
+import { roughAccordion } from "../../js/libs/accordions";
 document.querySelectorAll('.accordeon').forEach((accordeon) => {
 	roughAccordion(accordeon.querySelectorAll('.accordeon__head'), { 
 		events: 'click, mouseenter',

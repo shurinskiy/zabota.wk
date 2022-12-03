@@ -17,6 +17,7 @@
 			ajax: false,
 			restartOnPushState: false,
 			eventLag: false
+			// eventLag: { lagThreshold: 30 }
 		}
 	
 		Pace.on('done', () => {

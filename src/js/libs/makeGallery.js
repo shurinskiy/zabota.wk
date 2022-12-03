@@ -42,7 +42,7 @@
 * 
 * @вызов:
 * 
-import { makeGallery } from "../../js/lib";
+import { makeGallery } from "../../js/libs/makeGallery";
 makeGallery(document.querySelectorAll('.someblock'), { 
 	cls: gallery,
 	navigation: true 

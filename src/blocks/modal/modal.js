@@ -1,6 +1,7 @@
 import Inputmask from "inputmask";
 import scrollLock from 'scroll-lock';
 import { addUnderlay, makeModalFrame } from "../../js/libs/modal";
+import { selectTweaker } from "../../js/libs/selectTweaker";
 import { arrLast } from "../../js/libs/helpers";
 
 (() => {
@@ -8,7 +9,7 @@ import { arrLast } from "../../js/libs/helpers";
 	/* Проверка полей на пустое значение. В случае type="tel", нужно хотя бы одно заполненное поле */
 	const fieldsValidation = ([...fields]) => {
 		return fields.every((field) => {
-			if (field.type == 'text' || field.tagName == 'TEXTAREA') {
+			if (field.type == 'text' || field.tagName == 'TEXTAREA' || field.tagName == 'SELECT') {
 				return !!field.value;
 			} else if(field.type == 'tel') {
 				return fields.some(field => (field.type == 'tel') && !!field.value);
@@ -19,12 +20,12 @@ import { arrLast } from "../../js/libs/helpers";
 	
 	addUnderlay('modal');
 	makeModalFrame({ 
-		el: '.resume__field, .footer__call, .footer__ask-button, .header__button, .complete__button', 
+		el: '.resume__field, .footer__call, .footer__ask-button, .header__button, .complete__button, .rate__cost button', 
 		scrollLock,
 		/* Коллбэк на открытие модального окошка */
 		open: function(el) {
 			const agree = this.querySelector('.resume__agree [type="checkbox"]');
-			const required = this.querySelectorAll('[type="tel"], [type="text"], textarea');
+			const required = this.querySelectorAll('[type="tel"], [type="text"], textarea, select');
 			const submit = this.querySelector('[type="submit"]');
 			const alert = this.querySelector('.resume__alert');
 			const form = this.querySelector('form');
@@ -35,6 +36,9 @@ import { arrLast } from "../../js/libs/helpers";
 			
 			const id = arrLast(document.location.pathname.split('/')).split('.')[0];
 			const modal_id = arrLast([...this.closest('.modal')?.classList]);
+
+			/* Перехват селекта */
+			selectTweaker(this.querySelectorAll('.resume__select'));
 
 			/* Маска на ввод телефонного номера */
 			Inputmask({ 

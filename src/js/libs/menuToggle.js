@@ -16,7 +16,7 @@
 * @вызов
 * 
 import scrollLock from 'scroll-lock';
-import { menuToggle } from "../../js/lib";
+import { menuToggle } from "../../js/libs/menuToggle";
 const menu = document.querySelector('.menu');
 const toggles = document.querySelectorAll('.menu__toggle, .menu__close');
 menuToggle(menu, toggles,  {

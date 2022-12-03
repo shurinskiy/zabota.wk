@@ -170,10 +170,10 @@
 				td {
 					padding-bottom: 32px;
 					padding-top: 32px;
-					border-left: 1px solid transparent;
+					border-left: 1px solid #fff;
 					
 					&:not(:last-child) {
-						border-right: 1px solid transparent;
+						border-right: 1px solid #fff;
 					}
 					
 					&:nth-last-child(-n+4) {
