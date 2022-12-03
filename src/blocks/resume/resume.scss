@@ -118,36 +118,6 @@
 		line-height: 2.5;
 	}
 
-	/* &__select {
-		background-color: #3A3A3A;
-		border-radius: 24px;
-		padding: 10px 20px;
-		color: #fff;
-		display: flex;
-		align-items: center;
-		
-		select {
-			@extend %reset-input;
-			width: 100%;
-			color: #fff;
-			font-family: "PLB", sans-serif;
-			text-transform: uppercase;
-			text-align: center;
-			font-size: 14px;
-			height: 100%;
-			
-			option {
-				color: #000;
-				text-align: center;
-				text-transform: none;
-			}
-
-			option[value=""][disabled] {
-				display: none;
-			}
-		}
-	} */
-
 	&__select.select {
 		box-sizing: border-box;
 		display: block;
@@ -174,7 +144,7 @@
 			box-sizing: border-box;
 			background-color: #3A3A3A;
 			border-radius: 24px;
-			padding: 10px 55px;
+			padding: 10px 55px 10px 20px;
 			height: 100%;
 			color: #fff;
 			font-family: "PLB", sans-serif;
