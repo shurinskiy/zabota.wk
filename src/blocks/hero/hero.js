@@ -22,26 +22,24 @@ gsap.registerPlugin(ScrollTrigger);
 				y: -100,
 				opacity: 1
 			});
-		
-			return () => {
-				gsap.set(items, { clearProps: "all" });
-			};
 		});
 	}
 
 	if (title) {
 		gsap.matchMedia().add("(min-width: 780px)", () => {
 			gsap.from(title, {
+				delay: 1.5,
 				duration: 1.2,
 				opacity: 0,
 				y: 100,
 			});
 		});
 	}
-
+	
 	if (appeal) {
 		gsap.matchMedia().add("(min-width: 780px)", () => {
 			gsap.from(appeal, {
+				delay: 1.5,
 				duration: 1.2,
 				opacity: 0,
 				y: 100,

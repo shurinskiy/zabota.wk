@@ -16,12 +16,6 @@
 	justify-content: center;
 	transition: transform 0.2s;
 	opacity: 0;
-	animation: fade_in 0.3s;
-	animation-fill-mode: forwards;
-	@keyframes fade_out {
-		from { opacity: 1; }
-		to { opacity: 0; }
-	}
 	@keyframes fade_in {
 		from { opacity: 0; }
 		to { opacity: 1; }
@@ -42,5 +36,10 @@
 		margin-top: 23px;
 	}
 	
-	&.hidden { animation: fade_out 0.3s; }
+	&_showed {
+		animation-delay: 0.3s;
+		animation-name: fade_in;
+		animation-duration: 1.0s;
+		animation-fill-mode: forwards;
+	}
 }

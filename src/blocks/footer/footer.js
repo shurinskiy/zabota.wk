@@ -10,28 +10,32 @@ gsap.registerPlugin(ScrollTrigger);
 	const left = document.getElementById('arr-left');
 
 	if (right) {
-		gsap.to("#arr-right", {
-			scrollTrigger: {
-				trigger: "#arr-right",
-				start: "-750px 0", // when the top of the trigger hits the top of the viewport
-				end: "+=200",
-				scrub: 1,
-				markers: false,
-			},
-			x: 0,
+		gsap.matchMedia().add("(min-width: 960px)", () => {
+			gsap.to("#arr-right", {
+				scrollTrigger: {
+					trigger: "#arr-right",
+					start: "-750px 0", // when the top of the trigger hits the top of the viewport
+					end: "+=200",
+					scrub: 1,
+					markers: false,
+				},
+				x: 0,
+			});
 		});
 	}
-	
+			
 	if (left) {
-		gsap.to("#arr-left", {
-			scrollTrigger: {
-				trigger: "#arr-left",
-				start: "-750px 0",
-				end: "+=200",
-				scrub: 1,
-				markers: false,
-			},
-			x: 0,
+		gsap.matchMedia().add("(min-width: 960px)", () => {
+			gsap.to("#arr-left", {
+				scrollTrigger: {
+					trigger: "#arr-left",
+					start: "-750px 0",
+					end: "+=200",
+					scrub: 1,
+					markers: false,
+				},
+				x: 0,
+			});
 		});
 	}
 

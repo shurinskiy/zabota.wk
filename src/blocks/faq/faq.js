@@ -1,4 +1,4 @@
-import enquire from 'enquire.js';
+import gsap from "gsap";
 
 (() => {
 
@@ -19,9 +19,9 @@ import enquire from 'enquire.js';
 				.slideToggle();
 		}
 	});
-
-	enquire.register("screen and (min-width:960px)", {
-		match : () => document.querySelectorAll('.faq__items').forEach(item => item.removeAttribute('style'))
+	
+	gsap.matchMedia().add("(min-width: 960px)", () => {
+		document.querySelectorAll('.faq__items').forEach(item => item.removeAttribute('style'));
 	});
 
 })();
