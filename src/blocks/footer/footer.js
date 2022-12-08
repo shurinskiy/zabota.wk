@@ -40,5 +40,4 @@ gsap.registerPlugin(ScrollTrigger);
 	}
 
 	scrollToTop(document.querySelector('.footer__up'));
-
 })();
