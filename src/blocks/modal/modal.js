@@ -1,3 +1,4 @@
+import Cookies from 'js-cookie'
 import Inputmask from "inputmask";
 import scrollLock from 'scroll-lock';
 import { addUnderlay, makeModalFrame } from "../../js/libs/modal";
@@ -55,11 +56,12 @@ import { arrLast } from "../../js/libs/helpers";
 				
 				submit.addEventListener('click', (e) => {
 					e.preventDefault();
-		
+
 					if (fieldsValidation(required)) {
 						alert.replaceChildren();
 						alert.appendChild(loader);
-				
+						
+						// Отправка сообщения
 						$.ajax({
 							type: 'post',
 							dataType: 'json',
@@ -69,7 +71,14 @@ import { arrLast } from "../../js/libs/helpers";
 						}).done((response) => {
 							alert.replaceChildren();
 							
+							// Если сообщение удачно отправлено
 							if(response?.success) {
+
+								// Если модалка была вызвана со страниц case, faq или prices - ставлю куку
+								if(id.includes('case') || id.includes('prices') || id.includes('faq')) {
+									Cookies.set('ordered', true, { expires: 365 });
+								}
+					
 								// Еще одна модалка с адресом из data-modal формы
 								makeModalFrame.call(form, {
 									scrollLock,
@@ -80,7 +89,8 @@ import { arrLast } from "../../js/libs/helpers";
 										}
 									}
 								});
-	
+							
+							// Если при отправке сообщения, произошла какая-то проблема
 							} else {
 								// Если сервер захочет передать текстовый ответ
 								alert.innerText = response?.data?.text;
