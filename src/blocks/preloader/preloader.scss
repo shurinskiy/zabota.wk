@@ -11,6 +11,7 @@
 	height: 100vh;
 	height: calc(var(--vh, 1vh) * 100);
 	background: url('#{$images-path}body-noise.png') center / auto repeat, #131313;
+	transition: opacity 1s;
 
 	@keyframes animateHeart {
 		0% { transform: scale(0.8); }
