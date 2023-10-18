@@ -17,6 +17,8 @@ preloadingBar({ class: 'preloader', area: 'body' });
 export const preloadingBar = (options = {}) => {
 	let ctr = 0;
 	let images = [];
+	// let interval;
+	// const step = options.step || 4;
 	const cls = options.class || 'preloader';
 	const area = document.querySelector(options.area) || document;
 	const _wrapper = document.querySelector(`.${cls}`);
@@ -29,7 +31,7 @@ export const preloadingBar = (options = {}) => {
 		area.querySelectorAll('*:not(script)').forEach((tag) => {
 			let background = getComputedStyle(tag, null).backgroundImage;
 
-			if (tag.src && tag.tagName.toLowerCase() == 'img') {
+			if (tag.src && (tag.tagName.toLowerCase() == 'img' || tag.tagName.toLowerCase() == 'video')) {
 				images = [...images, tag.src];
 			} else if (background !== 'none') {
 				images = [...images, ...parseUrl(background)];
@@ -47,11 +49,33 @@ export const preloadingBar = (options = {}) => {
 		}, []);
 	}
 
+	/* function increasePercent(num, elem) {
+		clearInterval(interval);
+
+		let computed = getComputedStyle(_wrapper, null);
+		let time = parseInt(computed.transitionDuration) * 1000;
+		let t = Math.round(time / (num / step));
+		let n = parseInt(elem.innerText);
+
+		let interval = setInterval(() => {
+			n = n + step;
+			elem.innerText = n;
+		
+			if (n >= num) {
+				clearInterval(interval);
+				elem.innerText = num;
+			}
+		}, t);
+	} */
+
 	const imagesLoaded = () => {
 		let percent = Math.round(100 / images.length * ++ctr);
 
-		if(_counter)
+		if(_counter) {
+			// increasePercent(percent, _counter);
 			_counter.innerText = percent;
+		}
+
 		
 		if(_progress)
 			_progress.style.width = `${percent}%`;
@@ -67,18 +91,20 @@ export const preloadingBar = (options = {}) => {
 
 		setTimeout(() => { 
 			_wrapper.remove();
+			// area.classList.remove('preloading');
 		}, delay || 1200);
 	}
 
 	const init = () => {
 		getImages();
+		// area.classList.add('preloading');
 
 		images.forEach((item, i) => {
 			let clone = new Image();
 
+			clone.src = images[i];
 			clone.onload = imagesLoaded;
 			clone.onerror = imagesLoaded;
-			clone.src = images[i];
 		});
 	}
 

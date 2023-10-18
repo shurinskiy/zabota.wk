@@ -4,11 +4,11 @@
 	"scripts": {
 		"postinstall": "",
 		"bem": "bemtree-from-html",
-		"start": "gulp watch --dev --sync",
-		"remote": "gulp watch --remote",
-		"build": "gulp build",
-		"deploy-all": "gulp deploy --all",
-		"deploy": "gulp deploy"
+		"start": "gulp watch --dev --sync --openssl-legacy-provider",
+		"remote": "gulp watch --remote --openssl-legacy-provider",
+		"build": "gulp build --openssl-legacy-provider",
+		"deploy-all": "gulp deploy --all --openssl-legacy-provider",
+		"deploy": "gulp deploy --openssl-legacy-provider"
 	},
 	"keywords": [
 		"bem",
@@ -56,12 +56,10 @@
 		"inputmask": "^5.0.6",
 		"jquery": "^3.6.0",
 		"js-cookie": "^3.0.1",
-		"pace-js": "^1.2.4",
 		"scroll-lock": "^2.1.5"
 	},
 	"externalJs": {
-		"jquery": "dist/jquery.min.js",
-		"pace-js": "pace.min.js"
+		"jquery": "dist/jquery.min.js"
 	},
 	"ftp": {
 		"host": "",

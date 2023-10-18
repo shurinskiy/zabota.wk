@@ -10,7 +10,7 @@ import { arrLast } from "../../js/libs/helpers";
 				button.classList.add('playing');
 				audio.play();
 			} else {
-				audio.paused ? audio.play() : audio.pause();
+				(audio.paused || audio.ended) ? audio.play() : audio.pause();
 				button.classList.toggle('playing');
 			}
 		});
